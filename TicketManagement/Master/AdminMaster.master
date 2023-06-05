@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Master_AdminMaster" %>
+
+<%@ Register Src="~/Controls/Menu.ascx" TagPrefix="uc1" TagName="Menu" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server" id="Head1">
+    <title>PSW Helpdesk</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/jquery.gritter.css" rel="stylesheet" />
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/font-awesome.css" />
+
+    <link href="/css/tablecloth.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="/ico/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png" />
+    <!--============ javascript ===========-->
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery-ui-1.10.1.custom.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/jquery.sparkline.js"></script>
+    <script src="/js/bootstrap-fileupload.js"></script>
+    <script src="/js/jquery.metadata.js"></script>
+    <script src="/js/jquery.tablesorter.min.js"></script>
+    <script src="/js/jquery.tablecloth.js"></script>
+    <script src="/js/jquery.flot.js"></script>
+    <script src="/js/jquery.flot.selection.js"></script>
+    <script src="/js/excanvas.js"></script>
+    <script src="/js/jquery.flot.pie.js"></script>
+    <script src="/js/jquery.flot.stack.js"></script>
+    <script src="/js/jquery.flot.time.js"></script>
+    <script src="/js/jquery.flot.tooltip.js"></script>
+    <script src="/js/jquery.flot.resize.js"></script>
+    <script src="/js/jquery.collapsible.js"></script>
+    <script src="/js/accordion.nav.js"></script>
+
+
+
+    <script src="/js/tiny_mce/jquery.tinymce.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <script src="/js/ios-orientationchange-fix.js"></script>
+
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="/Scripts/Fancy/source/jquery.fancybox.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Scripts/Fancy/source/jquery.fancybox.css" media="screen" />
+
+    <!-- Add Button helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="/Scripts/Fancy/source/helpers/jquery.fancybox-buttons.css" />
+    <script type="text/javascript" src="/Scripts/Fancy/source/helpers/jquery.fancybox-buttons.js"></script>
+
+    <!-- Add Thumbnail helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="/Scripts/Fancy/source/helpers/jquery.fancybox-thumbs.css" />
+    <script type="text/javascript" src="/Scripts/Fancy/source/helpers/jquery.fancybox-thumbs.js"></script>
+
+    <!-- Add Media helper (this is optional) -->
+    <script type="text/javascript" src="/Scripts/Fancy/source/helpers/jquery.fancybox-media.js"></script>
+
+
+
+    <!--Sweet Alert-->
+    <link href="/css/sweetalert.css" rel="stylesheet" />
+    <script src="/js/sweetalert.min.js"></script>
+    <!--End Sweet Alert-->
+    <link href="/Scripts/jquery-ui.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-ui.js"></script>
+    <%--  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>--%>
+
+    <script src="/js/UnderscoreDotJS.js"></script>
+
+    <style>
+        .navbar-inner {
+            background-color: #2d3f61 !important;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="layout">
+            <!-- Navbar
+    ================================================== -->
+            <div class="navbar navbar-inverse top-nav">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <%--<span title="Home" class="home-link"><a href="/Default.aspx" class="icon-home"></a></span>--%>
+
+                        <a class="brand">
+                            <asp:Image ID="LogoImg" Width="95" Height="30" runat="server" alt="" ImageUrl="~/images/Logo_PSW.png" />
+                        </a>
+                        <div class="nav-collapse">
+                            <ul class="nav">
+                                <uc1:Menu runat="server" ID="Menu" />
+                            </ul>
+                        </div>
+                        <asp:ScriptManager ID="scriptManager1" runat="server" AsyncPostBackTimeout="3600">
+                            <Services>
+                                <asp:ServiceReference Path="/WCF/TicketService.svc" />
+                            </Services>
+                        </asp:ScriptManager>
+                        <div class="btn-toolbar pull-right notification-nav">
+                            <div class="btn-group">
+                                <div class="dropdown">
+                                    <asp:Label runat="server" ID="lblLoginUser" CssClass="lblLoginUser">  </asp:Label>
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <div class="dropdown">
+                                    <asp:LinkButton ToolTip="Log Out" runat="server" ID="lbLogout" CssClass="btn btn-notification" OnClick="lbLogout_Click"><i class="icon-signout"></i> </asp:LinkButton>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="main-wrapper">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="copyright">
+                <p>
+                    ©
+                    <asp:Label runat="server" ID="lblYear" Text="0"></asp:Label>, Sybrid Pvt Ltd. All rights reserved.
+                </p>
+            </div>
+            <div class="scroll-top">
+                <a href="#" class="tip-top" title="Go Top"><i class="icon-double-angle-up"></i></a>
+            </div>
+        </div>
+
+
+        <div id="waitProgressBar" class="span4 loaderBody">
+            <div class="alert" style="background-color: white !important; color: #2d3f61 !important; border: 1px solid">
+                <asp:Image ID="Image1" Height="30px" runat="server" alt="" ImageUrl="~/Images/loading.gif" />
+                <strong style="margin-left: 30px;">Please wait while processing...</strong>
+            </div>
+        </div>
+
+        <div class="loader"></div>
+        <input type="hidden" runat="server" value="" id="hf_IsCustomer" class="hf_IsCustomer" />
+
+    </form>
+</body>
+<script src="/js/jquery.gritter.js"></script>
+
+<script src="/js/Pages_JS/Constant.js"></script>
+<script type="text/javascript">
+    const FIELD_TYPE = { TextBox: 1, DropDown: 2, CheckBox: 3, RadioButton: 4, Label: 5, DateTime: 6, TimePicker: 7, FileUploader: 8 };
+</script>
+</html>

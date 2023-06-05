@@ -1,0 +1,947 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TicketSystemModelStoreContainer" CdmEntityContainer="TicketSystemEntities">
+    <FunctionImportMapping FunctionImportName="RoleAccess_SelectByApplicationid" FunctionName="TicketSystemModel.Store.RoleAccess_SelectByApplicationid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketSystemModel.RoleAccess_SelectByApplicationid_Result">
+          <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+          <ScalarProperty Name="Menu_Item_Name" ColumnName="Menu_Item_Name" />
+          <ScalarProperty Name="Menu_URL" ColumnName="Menu_URL" />
+          <ScalarProperty Name="Parent_Menu_Item_Code" ColumnName="Parent_Menu_Item_Code" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Displayed_In_Menu" ColumnName="Is_Displayed_In_Menu" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Company_Code" ColumnName="Company_Code" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="Has_Access" ColumnName="Has_Access" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="TicketSystemModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="TicketSystemModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="TicketSystemModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="TicketSystemModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketSystemModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="TicketSystemModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketSystemModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="TicketSystemModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="TicketSystemModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="split" FunctionName="TicketSystemModel.Store.split" />
+    <FunctionImportMapping FunctionImportName="TS_GET_COMMENTS_HISTORY" FunctionName="TicketSystemModel.Store.TS_GET_COMMENTS_HISTORY">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketSystemModel.TS_GET_COMMENTS_HISTORY_Result">
+          <ScalarProperty Name="TicketCommentId" ColumnName="TicketCommentId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CommentBy" ColumnName="CommentBy" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TS_GET_CHAT_HISTORYDETAIL" FunctionName="TicketSystemModel.Store.TS_GET_CHAT_HISTORYDETAIL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketSystemModel.TS_GET_CHAT_HISTORYDETAIL_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsReply" ColumnName="IsReply" />
+          <ScalarProperty Name="ActionBy" ColumnName="ActionBy" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ViewedBy" ColumnName="ViewedBy" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Dashboard_TopFive_CityWise_TicketsCount" FunctionName="TicketSystemModel.Store.Dashboard_TopFive_CityWise_TicketsCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketSystemModel.Dashboard_TopFive_CityWise_TicketsCount_Result">
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Dashboard_TopFive_CustomerWiseTicketsCount" FunctionName="TicketSystemModel.Store.Dashboard_TopFive_CustomerWiseTicketsCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketSystemModel.Dashboard_TopFive_CustomerWiseTicketsCount_Result">
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Dashboard_TopFive_ProductTicketsCount" FunctionName="TicketSystemModel.Store.Dashboard_TopFive_ProductTicketsCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketSystemModel.Dashboard_TopFive_ProductTicketsCount_Result">
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Dashboard_TopFive_UserWise_Relolved_TicketsCount" FunctionName="TicketSystemModel.Store.Dashboard_TopFive_UserWise_Relolved_TicketsCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketSystemModel.Dashboard_TopFive_UserWise_Relolved_TicketsCount_Result">
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Dashboard_Trend_SevenDays" FunctionName="TicketSystemModel.Store.Dashboard_Trend_SevenDays">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketSystemModel.Dashboard_Trend_SevenDays_Result">
+          <ScalarProperty Name="TrendDate" ColumnName="TrendDate" />
+          <ScalarProperty Name="TicketCount" ColumnName="TicketCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ContactTypes">
+      <EntityTypeMapping TypeName="TicketSystemModel.ContactType">
+        <MappingFragment StoreEntitySet="ContactType">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ContactType1" ColumnName="ContactType" />
+          <ScalarProperty Name="ContactTypeId" ColumnName="ContactTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="TicketSystemModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="AlternativeNumber" ColumnName="AlternativeNumber" />
+          <ScalarProperty Name="UserIp" ColumnName="UserIp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuItems">
+      <EntityTypeMapping TypeName="TicketSystemModel.MenuItem">
+        <MappingFragment StoreEntitySet="MenuItem">
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="Company_Code" ColumnName="Company_Code" />
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Is_Displayed_In_Menu" ColumnName="Is_Displayed_In_Menu" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Parent_Menu_Item_Code" ColumnName="Parent_Menu_Item_Code" />
+          <ScalarProperty Name="Menu_URL" ColumnName="Menu_URL" />
+          <ScalarProperty Name="Menu_Item_Name" ColumnName="Menu_Item_Name" />
+          <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="TicketSystemModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="TAT" ColumnName="TAT" />
+          <ScalarProperty Name="Company_Code" ColumnName="Company_Code" />
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+          <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleAccesses">
+      <EntityTypeMapping TypeName="TicketSystemModel.RoleAccess">
+        <MappingFragment StoreEntitySet="RoleAccess">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Has_Access" ColumnName="Has_Access" />
+          <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+          <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+          <ScalarProperty Name="Role_Access_Code" ColumnName="Role_Access_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setup_Application">
+      <EntityTypeMapping TypeName="TicketSystemModel.Setup_Application">
+        <MappingFragment StoreEntitySet="Setup_Application">
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setup_Color">
+      <EntityTypeMapping TypeName="TicketSystemModel.Setup_Color">
+        <MappingFragment StoreEntitySet="Setup_Color">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setup_Department">
+      <EntityTypeMapping TypeName="TicketSystemModel.Setup_Department">
+        <MappingFragment StoreEntitySet="Setup_Department">
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="IsTeamAllowed" ColumnName="IsTeamAllowed" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentPrefix" ColumnName="DepartmentPrefix" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setup_Designation">
+      <EntityTypeMapping TypeName="TicketSystemModel.Setup_Designation">
+        <MappingFragment StoreEntitySet="Setup_Designation">
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DesignationName" ColumnName="DesignationName" />
+          <ScalarProperty Name="DesignationId" ColumnName="DesignationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setup_Employee">
+      <EntityTypeMapping TypeName="TicketSystemModel.Setup_Employee">
+        <MappingFragment StoreEntitySet="Setup_Employee">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="DesignationId" ColumnName="DesignationId" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="Emp_Id" ColumnName="Emp_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TicketSystemModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_ChatLog">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_ChatLog">
+        <MappingFragment StoreEntitySet="TS_ChatLog">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDateInt" ColumnName="ModifiedDateInt" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDateInt" ColumnName="CreatedDateInt" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="IsReply" ColumnName="IsReply" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Description_html" ColumnName="Description_html" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AssigneeId" ColumnName="AssigneeId" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="TaskMasterId" ColumnName="TaskMasterId" />
+          <ScalarProperty Name="TicketMasterId" ColumnName="TicketMasterId" />
+          <ScalarProperty Name="ChatTypeId" ColumnName="ChatTypeId" />
+          <ScalarProperty Name="ChatLogId" ColumnName="ChatLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_MeetingAttachments">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_MeetingAttachments">
+        <MappingFragment StoreEntitySet="TS_MeetingAttachments">
+          <ScalarProperty Name="FileOriginalName" ColumnName="FileOriginalName" />
+          <ScalarProperty Name="Filetype" ColumnName="Filetype" />
+          <ScalarProperty Name="Filecomments" ColumnName="Filecomments" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="TargetId" ColumnName="TargetId" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_ChatType">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_ChatType">
+        <MappingFragment StoreEntitySet="TS_Setup_ChatType">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ChatType" ColumnName="ChatType" />
+          <ScalarProperty Name="ChatTypeId" ColumnName="ChatTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_Priority">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_Priority">
+        <MappingFragment StoreEntitySet="TS_Setup_Priority">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="PriorityName" ColumnName="PriorityName" />
+          <ScalarProperty Name="PriorityId" ColumnName="PriorityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_RequestMode">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_RequestMode">
+        <MappingFragment StoreEntitySet="TS_Setup_RequestMode">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="RequestMode" ColumnName="RequestMode" />
+          <ScalarProperty Name="RequestModeId" ColumnName="RequestModeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_RequestType">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_RequestType">
+        <MappingFragment StoreEntitySet="TS_Setup_RequestType">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="RequestTypeName" ColumnName="RequestTypeName" />
+          <ScalarProperty Name="RequestTypeId" ColumnName="RequestTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_RequestTypeCategory">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_RequestTypeCategory">
+        <MappingFragment StoreEntitySet="TS_Setup_RequestTypeCategory">
+          <ScalarProperty Name="UserIp" ColumnName="UserIp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="RequestTypeId" ColumnName="RequestTypeId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_RequestTypeSubcategory">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_RequestTypeSubcategory">
+        <MappingFragment StoreEntitySet="TS_Setup_RequestTypeSubcategory">
+          <ScalarProperty Name="UserIp" ColumnName="UserIp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ResolutionTime" ColumnName="ResolutionTime" />
+          <ScalarProperty Name="SubcategoryName" ColumnName="SubcategoryName" />
+          <ScalarProperty Name="SubcategoryId" ColumnName="SubcategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_TicketLevel">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_TicketLevel">
+        <MappingFragment StoreEntitySet="TS_Setup_TicketLevel">
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+          <ScalarProperty Name="LevelId" ColumnName="LevelId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_TicketStatus">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_TicketStatus">
+        <MappingFragment StoreEntitySet="TS_Setup_TicketStatus">
+          <ScalarProperty Name="BackgroundColor" ColumnName="BackgroundColor" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="imageUrl" ColumnName="imageUrl" />
+          <ScalarProperty Name="IsInitiator" ColumnName="IsInitiator" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_TicketType">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_TicketType">
+        <MappingFragment StoreEntitySet="TS_Setup_TicketType">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TicketTypeName" ColumnName="TicketTypeName" />
+          <ScalarProperty Name="TicketTypeId" ColumnName="TicketTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_StatusDetail">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_StatusDetail">
+        <MappingFragment StoreEntitySet="TS_StatusDetail">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsInitiator" ColumnName="IsInitiator" />
+          <ScalarProperty Name="ChildId" ColumnName="ChildId" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="StatusDetailId" ColumnName="StatusDetailId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_TaskAttachments">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_TaskAttachments">
+        <MappingFragment StoreEntitySet="TS_TaskAttachments">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="FileOriginalName" ColumnName="FileOriginalName" />
+          <ScalarProperty Name="Filetype" ColumnName="Filetype" />
+          <ScalarProperty Name="Filecomments" ColumnName="Filecomments" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="TargetId" ColumnName="TargetId" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_TaskDetail">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_TaskDetail">
+        <MappingFragment StoreEntitySet="TS_TaskDetail">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AssigneeTo" ColumnName="AssigneeTo" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="TaskMasterId" ColumnName="TaskMasterId" />
+          <ScalarProperty Name="TaskDetailId" ColumnName="TaskDetailId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_TaskLog">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_TaskLog">
+        <MappingFragment StoreEntitySet="TS_TaskLog">
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="ModifiedDateInt" ColumnName="ModifiedDateInt" />
+          <ScalarProperty Name="CreatedDateInt" ColumnName="CreatedDateInt" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsReply" ColumnName="IsReply" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AssigneeId" ColumnName="AssigneeId" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="TaskDetailId" ColumnName="TaskDetailId" />
+          <ScalarProperty Name="TaskMasterId" ColumnName="TaskMasterId" />
+          <ScalarProperty Name="TaskLogId" ColumnName="TaskLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_TaskMaster">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_TaskMaster">
+        <MappingFragment StoreEntitySet="TS_TaskMaster">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="PriorityId" ColumnName="PriorityId" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="AssigneeId" ColumnName="AssigneeId" />
+          <ScalarProperty Name="InitiatorId" ColumnName="InitiatorId" />
+          <ScalarProperty Name="TaskTitle" ColumnName="TaskTitle" />
+          <ScalarProperty Name="TicketMasterId" ColumnName="TicketMasterId" />
+          <ScalarProperty Name="TaskMasterId" ColumnName="TaskMasterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_TicketAttachments">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_TicketAttachments">
+        <MappingFragment StoreEntitySet="TS_TicketAttachments">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="FileOriginalName" ColumnName="FileOriginalName" />
+          <ScalarProperty Name="Filetype" ColumnName="Filetype" />
+          <ScalarProperty Name="Filecomments" ColumnName="Filecomments" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="TargetId" ColumnName="TargetId" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_TicketCC">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_TicketCC">
+        <MappingFragment StoreEntitySet="TS_TicketCC">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="AssigneeId" ColumnName="AssigneeId" />
+          <ScalarProperty Name="TicketMasterId" ColumnName="TicketMasterId" />
+          <ScalarProperty Name="TicketToId" ColumnName="TicketToId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_TicketComment">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_TicketComment">
+        <MappingFragment StoreEntitySet="TS_TicketComment">
+          <ScalarProperty Name="ModifiedDateInt" ColumnName="ModifiedDateInt" />
+          <ScalarProperty Name="CreatedDateInt" ColumnName="CreatedDateInt" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TicketMasterId" ColumnName="TicketMasterId" />
+          <ScalarProperty Name="TicketCommentId" ColumnName="TicketCommentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_TicketMeeting">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_TicketMeeting">
+        <MappingFragment StoreEntitySet="TS_TicketMeeting">
+          <ScalarProperty Name="CreatedDateInt" ColumnName="CreatedDateInt" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="MeetingDetail" ColumnName="MeetingDetail" />
+          <ScalarProperty Name="MeetingAgenda" ColumnName="MeetingAgenda" />
+          <ScalarProperty Name="MeetingDate" ColumnName="MeetingDate" />
+          <ScalarProperty Name="MeetingEndTime" ColumnName="MeetingEndTime" />
+          <ScalarProperty Name="MeetingStartTime" ColumnName="MeetingStartTime" />
+          <ScalarProperty Name="TicketMasterId" ColumnName="TicketMasterId" />
+          <ScalarProperty Name="TicketMeetingId" ColumnName="TicketMeetingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_TicketMeetingDetail">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_TicketMeetingDetail">
+        <MappingFragment StoreEntitySet="TS_TicketMeetingDetail">
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="AttendeeId" ColumnName="AttendeeId" />
+          <ScalarProperty Name="TicketMeetingId" ColumnName="TicketMeetingId" />
+          <ScalarProperty Name="TicketMeetingDetail" ColumnName="TicketMeetingDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_TicketTo">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_TicketTo">
+        <MappingFragment StoreEntitySet="TS_TicketTo">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="TicketMasterId" ColumnName="TicketMasterId" />
+          <ScalarProperty Name="TicketToId" ColumnName="TicketToId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLogins">
+      <EntityTypeMapping TypeName="TicketSystemModel.UserLogin">
+        <MappingFragment StoreEntitySet="UserLogin">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+          <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Login_ID" ColumnName="Login_ID" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+          <ScalarProperty Name="Emp_Id" ColumnName="Emp_Id" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLoginHistories">
+      <EntityTypeMapping TypeName="TicketSystemModel.UserLoginHistory">
+        <MappingFragment StoreEntitySet="UserLoginHistory">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Dashboard_GetAllChat" FunctionName="TicketSystemModel.Store.Dashboard_GetAllChat" />
+    <EntitySetMapping Name="TS_ChatLogReadDetail">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_ChatLogReadDetail">
+        <MappingFragment StoreEntitySet="TS_ChatLogReadDetail">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ChatLogId" ColumnName="ChatLogId" />
+          <ScalarProperty Name="ChatLogReadDetailId" ColumnName="ChatLogReadDetailId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Dashboard_PriorityWiseTicketsCount" FunctionName="TicketSystemModel.Store.Dashboard_PriorityWiseTicketsCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketSystemModel.Dashboard_PriorityWiseTicketsCount_Result1">
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="RoleStatusMappings">
+      <EntityTypeMapping TypeName="TicketSystemModel.RoleStatusMapping">
+        <MappingFragment StoreEntitySet="RoleStatusMapping">
+          <ScalarProperty Name="UserIp" ColumnName="UserIp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+          <ScalarProperty Name="Status_Mapping_Id" ColumnName="Status_Mapping_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="TS_Populate_Ticket_code" FunctionName="TicketSystemModel.Store.TS_Populate_Ticket_code" />
+    <EntitySetMapping Name="TS_Setup_TypeOfIssue">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_TypeOfIssue">
+        <MappingFragment StoreEntitySet="TS_Setup_TypeOfIssue">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TypeOfIssue" ColumnName="TypeOfIssue" />
+          <ScalarProperty Name="TypeOfIssueId" ColumnName="TypeOfIssueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_TicketDetail">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_TicketDetail">
+        <MappingFragment StoreEntitySet="TS_TicketDetail">
+          <ScalarProperty Name="ProductSubCategoryId" ColumnName="ProductSubCategoryId" />
+          <ScalarProperty Name="TypeOfComplaintId" ColumnName="TypeOfComplaintId" />
+          <ScalarProperty Name="TypeOfIssueId" ColumnName="TypeOfIssueId" />
+          <ScalarProperty Name="CorrectiveActionId" ColumnName="CorrectiveActionId" />
+          <ScalarProperty Name="FaultId" ColumnName="FaultId" />
+          <ScalarProperty Name="EmailFrom" ColumnName="EmailFrom" />
+          <ScalarProperty Name="ModifiedDateInt" ColumnName="ModifiedDateInt" />
+          <ScalarProperty Name="CreatedDateInt" ColumnName="CreatedDateInt" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Description_html" ColumnName="Description_html" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="AssigneeId" ColumnName="AssigneeId" />
+          <ScalarProperty Name="TicketMasterId" ColumnName="TicketMasterId" />
+          <ScalarProperty Name="TicketDetailId" ColumnName="TicketDetailId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_TicketMaster">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_TicketMaster">
+        <MappingFragment StoreEntitySet="TS_TicketMaster">
+          <ScalarProperty Name="Ticket_Reopen_Date" ColumnName="Ticket_Reopen_Date" />
+          <ScalarProperty Name="Ticket_Reopen_DateInt" ColumnName="Ticket_Reopen_DateInt" />
+          <ScalarProperty Name="ProductSubCategoryId" ColumnName="ProductSubCategoryId" />
+          <ScalarProperty Name="TypeOfComplaintId" ColumnName="TypeOfComplaintId" />
+          <ScalarProperty Name="TypeOfIssueId" ColumnName="TypeOfIssueId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="RequestTypeSubCategoryId" ColumnName="RequestTypeSubCategoryId" />
+          <ScalarProperty Name="RequestTypeCategoryId" ColumnName="RequestTypeCategoryId" />
+          <ScalarProperty Name="IsFlagMark" ColumnName="IsFlagMark" />
+          <ScalarProperty Name="TicketTypeId" ColumnName="TicketTypeId" />
+          <ScalarProperty Name="LevelId" ColumnName="LevelId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDateInt" ColumnName="ModifiedDateInt" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="TicketCreationTime" ColumnName="TicketCreationTime" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDateInt" ColumnName="CreatedDateInt" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TicketCreationDateInt" ColumnName="TicketCreationDateInt" />
+          <ScalarProperty Name="TicketCreationDate" ColumnName="TicketCreationDate" />
+          <ScalarProperty Name="Description_html" ColumnName="Description_html" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Tittle" ColumnName="Tittle" />
+          <ScalarProperty Name="IsAssigned" ColumnName="IsAssigned" />
+          <ScalarProperty Name="RequestTypeId" ColumnName="RequestTypeId" />
+          <ScalarProperty Name="RequestModeId" ColumnName="RequestModeId" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="PriorityId" ColumnName="PriorityId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="AssigneeId" ColumnName="AssigneeId" />
+          <ScalarProperty Name="InitiatorId" ColumnName="InitiatorId" />
+          <ScalarProperty Name="ParentTicketMasterId" ColumnName="ParentTicketMasterId" />
+          <ScalarProperty Name="TicketCode" ColumnName="TicketCode" />
+          <ScalarProperty Name="TicketMasterId" ColumnName="TicketMasterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_TypeOfComplaint">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_TypeOfComplaint">
+        <MappingFragment StoreEntitySet="TS_Setup_TypeOfComplaint">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TypeOfComplaint" ColumnName="TypeOfComplaint" />
+          <ScalarProperty Name="TypeOfComplaintId" ColumnName="TypeOfComplaintId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_ProductSubCategory">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_ProductSubCategory">
+        <MappingFragment StoreEntitySet="TS_Setup_ProductSubCategory">
+          <ScalarProperty Name="UserIp" ColumnName="UserIp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ProductSubCategory" ColumnName="ProductSubCategory" />
+          <ScalarProperty Name="TypeOfIssueId" ColumnName="TypeOfIssueId" />
+          <ScalarProperty Name="ProductSubCategoryId" ColumnName="ProductSubCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_City">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_City">
+        <MappingFragment StoreEntitySet="TS_Setup_City">
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedAt" ColumnName="ModifiedAt" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setup_TicketPreRequisite_Values">
+      <EntityTypeMapping TypeName="TicketSystemModel.Setup_TicketPreRequisite_Values">
+        <MappingFragment StoreEntitySet="Setup_TicketPreRequisite_Values">
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="FormType" ColumnName="FormType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setup_RequestTypeSubcategoryFieldType">
+      <EntityTypeMapping TypeName="TicketSystemModel.Setup_RequestTypeSubcategoryFieldType">
+        <MappingFragment StoreEntitySet="Setup_RequestTypeSubcategoryFieldType">
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="InputClass" ColumnName="InputClass" />
+          <ScalarProperty Name="FieldTypeId" ColumnName="FieldTypeId" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="RequestTypeSubcategoryId" ColumnName="RequestTypeSubcategoryId" />
+          <ScalarProperty Name="RequestTypeSubcategoryFieldTypeId" ColumnName="RequestTypeSubcategoryFieldTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setup_RequestTypeSubcategoryFieldTypeDetail">
+      <EntityTypeMapping TypeName="TicketSystemModel.Setup_RequestTypeSubcategoryFieldTypeDetail">
+        <MappingFragment StoreEntitySet="Setup_RequestTypeSubcategoryFieldTypeDetail">
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="FieldValueTypeID" ColumnName="FieldValueTypeID" />
+          <ScalarProperty Name="FieldValueID" ColumnName="FieldValueID" />
+          <ScalarProperty Name="FieldValue" ColumnName="FieldValue" />
+          <ScalarProperty Name="RequestTypeSubcategoryFieldTypeId" ColumnName="RequestTypeSubcategoryFieldTypeId" />
+          <ScalarProperty Name="RequestTypeSubcategoryFieldTypeDetailId" ColumnName="RequestTypeSubcategoryFieldTypeDetailId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setup_RequestTypeSubcategoryFieldValue">
+      <EntityTypeMapping TypeName="TicketSystemModel.Setup_RequestTypeSubcategoryFieldValue">
+        <MappingFragment StoreEntitySet="Setup_RequestTypeSubcategoryFieldValue">
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDateInt" ColumnName="ModifiedDateInt" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDateInt" ColumnName="CreatedDateInt" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="RequestTypeSubcategoryFieldTypeDetailId" ColumnName="RequestTypeSubcategoryFieldTypeDetailId" />
+          <ScalarProperty Name="FieldValue" ColumnName="FieldValue" />
+          <ScalarProperty Name="RequestTypeSubcategoryFieldTypeId" ColumnName="RequestTypeSubcategoryFieldTypeId" />
+          <ScalarProperty Name="TicketMasterId" ColumnName="TicketMasterId" />
+          <ScalarProperty Name="RequestTypeSubcategoryFieldValueId" ColumnName="RequestTypeSubcategoryFieldValueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_ReportedBy">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_ReportedBy">
+        <MappingFragment StoreEntitySet="TS_Setup_ReportedBy">
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedAt" ColumnName="ModifiedAt" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="ReportedByName" ColumnName="ReportedByName" />
+          <ScalarProperty Name="ReportedById" ColumnName="ReportedById" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_Setup_TicketPreRequisiteValuesType">
+      <EntityTypeMapping TypeName="TicketSystemModel.TS_Setup_TicketPreRequisiteValuesType">
+        <MappingFragment StoreEntitySet="TS_Setup_TicketPreRequisiteValuesType">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

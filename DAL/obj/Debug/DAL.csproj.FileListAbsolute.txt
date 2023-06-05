@@ -1,0 +1,68 @@
+F:\Projects\Cybernet\CybernetHelpDesk\DAL\bin\Debug\DAL.dll.config
+F:\Projects\Cybernet\CybernetHelpDesk\DAL\bin\Debug\DAL.dll
+F:\Projects\Cybernet\CybernetHelpDesk\DAL\bin\Debug\DAL.pdb
+F:\Projects\Cybernet\CybernetHelpDesk\DAL\bin\Debug\EntityFramework.dll
+F:\Projects\Cybernet\CybernetHelpDesk\DAL\bin\Debug\EntityFramework.xml
+F:\Projects\Cybernet\CybernetHelpDesk\DAL\obj\Debug\DAL.dll
+F:\Projects\Cybernet\CybernetHelpDesk\DAL\obj\Debug\DAL.pdb
+F:\Projects\Cybernet\CybernetHelpDesk\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\Projects\CybernetHelpDesk\CybernetHelpDeskGit\DAL\bin\Debug\DAL.dll.config
+F:\Projects\CybernetHelpDesk\CybernetHelpDeskGit\DAL\bin\Debug\DAL.dll
+F:\Projects\CybernetHelpDesk\CybernetHelpDeskGit\DAL\bin\Debug\DAL.pdb
+F:\Projects\CybernetHelpDesk\CybernetHelpDeskGit\DAL\bin\Debug\EntityFramework.dll
+F:\Projects\CybernetHelpDesk\CybernetHelpDeskGit\DAL\bin\Debug\EntityFramework.xml
+F:\Projects\CybernetHelpDesk\CybernetHelpDeskGit\DAL\obj\Debug\DAL.dll
+F:\Projects\CybernetHelpDesk\CybernetHelpDeskGit\DAL\obj\Debug\DAL.pdb
+D:\Office Work\CybernetHelpDesk\CybernetHelpDeskGit\DAL\bin\Debug\DAL.dll.config
+D:\Office Work\CybernetHelpDesk\CybernetHelpDeskGit\DAL\bin\Debug\DAL.dll
+D:\Office Work\CybernetHelpDesk\CybernetHelpDeskGit\DAL\bin\Debug\DAL.pdb
+D:\Office Work\CybernetHelpDesk\CybernetHelpDeskGit\DAL\bin\Debug\EntityFramework.dll
+D:\Office Work\CybernetHelpDesk\CybernetHelpDeskGit\DAL\bin\Debug\EntityFramework.xml
+D:\Office Work\CybernetHelpDesk\CybernetHelpDeskGit\DAL\obj\Debug\DAL.dll
+D:\Office Work\CybernetHelpDesk\CybernetHelpDeskGit\DAL\obj\Debug\DAL.pdb
+E:\AsifGitProjects\ConcaveHelpDesk\DAL\bin\Debug\DAL.dll.config
+E:\AsifGitProjects\ConcaveHelpDesk\DAL\bin\Debug\DAL.dll
+E:\AsifGitProjects\ConcaveHelpDesk\DAL\bin\Debug\DAL.pdb
+E:\AsifGitProjects\ConcaveHelpDesk\DAL\bin\Debug\EntityFramework.dll
+E:\AsifGitProjects\ConcaveHelpDesk\DAL\bin\Debug\EntityFramework.xml
+E:\AsifGitProjects\ConcaveHelpDesk\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\AsifGitProjects\ConcaveHelpDesk\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\AsifGitProjects\ConcaveHelpDesk\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\AsifGitProjects\ConcaveHelpDesk\DAL\obj\Debug\DAL.dll
+E:\AsifGitProjects\ConcaveHelpDesk\DAL\obj\Debug\DAL.pdb
+E:\AsifNonGitProjects\PSWHelpDesk\DAL\bin\Debug\DAL.dll.config
+E:\AsifNonGitProjects\PSWHelpDesk\DAL\bin\Debug\DAL.dll
+E:\AsifNonGitProjects\PSWHelpDesk\DAL\bin\Debug\DAL.pdb
+E:\AsifNonGitProjects\PSWHelpDesk\DAL\bin\Debug\EntityFramework.dll
+E:\AsifNonGitProjects\PSWHelpDesk\DAL\bin\Debug\EntityFramework.xml
+E:\AsifNonGitProjects\PSWHelpDesk\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\AsifNonGitProjects\PSWHelpDesk\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\AsifNonGitProjects\PSWHelpDesk\DAL\obj\Debug\DAL.dll
+E:\AsifNonGitProjects\PSWHelpDesk\DAL\obj\Debug\DAL.pdb
+E:\AsifNonGitProjects\PSW-Helpdesk\DAL\bin\Debug\DAL.dll.config
+E:\AsifNonGitProjects\PSW-Helpdesk\DAL\bin\Debug\DAL.dll
+E:\AsifNonGitProjects\PSW-Helpdesk\DAL\bin\Debug\DAL.pdb
+E:\AsifNonGitProjects\PSW-Helpdesk\DAL\bin\Debug\EntityFramework.dll
+E:\AsifNonGitProjects\PSW-Helpdesk\DAL\bin\Debug\EntityFramework.xml
+E:\AsifNonGitProjects\PSW-Helpdesk\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\AsifNonGitProjects\PSW-Helpdesk\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\AsifNonGitProjects\PSW-Helpdesk\DAL\obj\Debug\DAL.dll
+E:\AsifNonGitProjects\PSW-Helpdesk\DAL\obj\Debug\DAL.pdb
+D:\Office Work\PSW-Helpdesk\DAL\bin\Debug\DAL.dll.config
+D:\Office Work\PSW-Helpdesk\DAL\bin\Debug\DAL.dll
+D:\Office Work\PSW-Helpdesk\DAL\bin\Debug\DAL.pdb
+D:\Office Work\PSW-Helpdesk\DAL\bin\Debug\EntityFramework.dll
+D:\Office Work\PSW-Helpdesk\DAL\bin\Debug\EntityFramework.xml
+D:\Office Work\PSW-Helpdesk\DAL\obj\Debug\DAL.dll
+D:\Office Work\PSW-Helpdesk\DAL\obj\Debug\DAL.pdb
+D:\Office Work\PSW-Helpdesk\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\GitProjects\PSWHelpDesk\DAL\bin\Debug\DAL.dll.config
+C:\GitProjects\PSWHelpDesk\DAL\bin\Debug\DAL.dll
+C:\GitProjects\PSWHelpDesk\DAL\bin\Debug\DAL.pdb
+C:\GitProjects\PSWHelpDesk\DAL\bin\Debug\EntityFramework.dll
+C:\GitProjects\PSWHelpDesk\DAL\bin\Debug\EntityFramework.xml
+C:\GitProjects\PSWHelpDesk\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\GitProjects\PSWHelpDesk\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\GitProjects\PSWHelpDesk\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\GitProjects\PSWHelpDesk\DAL\obj\Debug\DAL.dll
+C:\GitProjects\PSWHelpDesk\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8497B71-10EA-4B1A-8E6B-D10310CD8623}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CircuitTypewiseClientCount_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CircuitTypewiseClientRegionCount_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Client_Last60Day_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ComplainDetail_Report_bakup_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ComplainDetail_Report_NEW_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ComplainDetail_Report_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ComplainsVisits_Report_NEW_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ComplainsVisits_Report_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContactType.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAL.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAL.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_PriorityWiseTicketsCount_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_PriorityWiseTicketsCount_Result1.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_TopFive_CityWise_TicketsCount_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_TopFive_CustomerWiseTicketsCount_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_TopFive_ProductTicketsCount_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_TopFive_UserWise_Relolved_TicketsCount_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_Trend_SevenDays_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetDC_Setup_ExchangePOP_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetGlobelSerach1_Backup_20160810_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetGlobelSerach1_Backup_201707111_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetGlobelSerach1_Backup_20170711_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetGlobelSerach1_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetGlobelSerach_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetIONSerach_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Get_Bulletin_POCEmail_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManagedServiceDetailReport_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MenuItem.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductStatus_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionClientCount_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleAccess.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleAccess_SelectByApplicationid_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleAccess_Select_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleStatusMapping.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Setup_Application.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Setup_Color.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Setup_Department.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Setup_Designation.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Setup_Employee.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Setup_RequestTypeSubcategoryFieldType.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Setup_RequestTypeSubcategoryFieldTypeDetail.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Setup_RequestTypeSubcategoryFieldValue.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Setup_TicketPreRequisite_Values.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Summary_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPAccountManagerClientwise_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPAccountManagerProductwise_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPBackupClient_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPBackupLinkProduct_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPClient_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPCustomerType_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPExchangePOP_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPLocation_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPPrimaryClient_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPPrimaryLinkProduct_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPProductLink_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPProduct_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPVendorLink_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_ChatLog.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_ChatLogReadDetail.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_EmployeeHirerarchy_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_GET_CHAT_HISTORYDETAIL_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_GET_COMMENTS_HISTORY_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_GET_REPLY_RESPONSE_HISTORY_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_MeetingAttachments.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_SearchTicket_Result.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_ChatType.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_City.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_Priority.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_ProductSubCategory.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_ReportedBy.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_RequestMode.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_RequestType.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_RequestTypeCategory.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_RequestTypeSubcategory.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_TicketLevel.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_TicketPreRequisiteValuesType.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_TicketStatus.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_TicketType.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_TypeOfComplaint.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Setup_TypeOfIssue.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_StatusDetail.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_TaskAttachments.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_TaskDetail.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_TaskLog.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_TaskMaster.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_TicketAttachments.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_TicketCC.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_TicketComment.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_TicketDetail.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_TicketMaster.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_TicketMeeting.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_TicketMeetingDetail.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TS_TicketTo.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserLoginHistory.cs">
+      <DependentUpon>DAL.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DAL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DAL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="DAL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DAL.edmx</DependentUpon>
+      <LastGenOutput>DAL.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DAL.edmx.diagram">
+      <DependentUpon>DAL.edmx</DependentUpon>
+    </None>
+    <None Include="DAL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DAL.edmx</DependentUpon>
+      <LastGenOutput>DAL.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

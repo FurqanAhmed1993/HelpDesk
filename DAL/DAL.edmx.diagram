@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e253fa520bfd43c2be0df0cc309a84c9" Name="Diagram1" ZoomLevel="46">
+        <EntityTypeShape EntityType="TicketSystemModel.ContactType" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.Customer" Width="1.5" PointX="5.25" PointY="43.5" />
+        <EntityTypeShape EntityType="TicketSystemModel.MenuItem" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="TicketSystemModel.Role" Width="1.5" PointX="3" PointY="27.125" />
+        <EntityTypeShape EntityType="TicketSystemModel.RoleAccess" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="TicketSystemModel.Setup_Application" Width="1.5" PointX="0.75" PointY="27.125" />
+        <EntityTypeShape EntityType="TicketSystemModel.Setup_Color" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.Setup_Department" Width="1.5" PointX="0.75" PointY="21.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.Setup_Designation" Width="1.5" PointX="0.75" PointY="17.25" />
+        <EntityTypeShape EntityType="TicketSystemModel.Setup_Employee" Width="1.5" PointX="3" PointY="21.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.sysdiagram" Width="1.5" PointX="4.75" PointY="5.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_ChatLog" Width="1.5" PointX="15" PointY="20.875" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_MeetingAttachments" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_ChatType" Width="1.5" PointX="12.75" PointY="32.5" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_Priority" Width="1.5" PointX="10.5" PointY="8.875" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_RequestMode" Width="1.5" PointX="5.25" PointY="28.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_RequestType" Width="1.5" PointX="5.25" PointY="10.875" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_RequestTypeCategory" Width="1.5" PointX="5.25" PointY="39.5" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_RequestTypeSubcategory" Width="1.5" PointX="5.25" PointY="14.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_TicketLevel" Width="1.5" PointX="5.25" PointY="32.25" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_TicketStatus" Width="1.5" PointX="8.25" PointY="1.5" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_TicketType" Width="1.5" PointX="5.25" PointY="36" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_StatusDetail" Width="1.5" PointX="10.5" PointY="1.875" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_TaskAttachments" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_TaskDetail" Width="1.5" PointX="10.5" PointY="16.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_TaskLog" Width="1.5" PointX="18" PointY="19.625" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_TaskMaster" Width="1.5" PointX="12.75" PointY="20.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_TicketAttachments" Width="1.5" PointX="7.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_TicketCC" Width="1.5" PointX="7.5" PointY="57.625" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_TicketComment" Width="1.5" PointX="7.5" PointY="53.375" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_TicketMeeting" Width="1.5" PointX="9.75" PointY="27.25" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_TicketMeetingDetail" Width="1.5" PointX="12" PointY="28.375" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_TicketTo" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.UserLogin" Width="1.5" PointX="5.25" PointY="20.25" />
+        <EntityTypeShape EntityType="TicketSystemModel.UserLoginHistory" Width="1.5" PointX="10.5" PointY="22.125" />
+        <AssociationConnector Association="TicketSystemModel.FK__RoleAcces__Menu___3B75D760" />
+        <AssociationConnector Association="TicketSystemModel.FK_Role_Setup_Application" />
+        <AssociationConnector Association="TicketSystemModel.FK_UserLogin_Role" />
+        <AssociationConnector Association="TicketSystemModel.FK_Sec_UserLoginHistory_Setup_Application" />
+        <AssociationConnector Association="TicketSystemModel.FK_Setup_Application_Setup_Application" />
+        <AssociationConnector Association="TicketSystemModel.FK_Setup_Employee_Setup_Department" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskMaster_Setup_Department" />
+        <AssociationConnector Association="TicketSystemModel.FK_Setup_Employee_Setup_Designation" />
+        <AssociationConnector Association="TicketSystemModel.FK_Setup_Employee_UserLogin" />
+        <AssociationConnector Association="TicketSystemModel.FK_Setup_Employee_UserLogin1" />
+        <AssociationConnector Association="TicketSystemModel.FK_UserLogin_Setup_Employee" />
+        <AssociationConnector Association="TicketSystemModel.FK_Setup_ChatLog_TS_Setup_ChatType" />
+        <AssociationConnector Association="TicketSystemModel.FK_Setup_ChatLog_TS_TaskMaster" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_ChatLog_UserLogin" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_ChatLog_UserLogin1" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_ChatLog_UserLogin2" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskMaster_TS_Setup_Priority" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_Setup_RequestTypeCategory_TS_Setup_RequestType" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_Setup_RequestTypeSubcategory_TS_Setup_RequestTypeCategory" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_StatusDetail_TS_Setup_TicketStatus" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskDetail_TS_Setup_TicketStatus" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskLog_TS_Setup_TicketStatus" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskMaster_TS_Setup_TicketStatus" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskDetail_TS_TaskMaster" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskDetail_UserLogin" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskDetail_UserLogin1" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskLog_TS_TaskDetail1" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskLog_TS_TaskDetail" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskLog_TS_TaskMaster" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskLog_UserLogin" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskMaster_UserLogin" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskMaster_UserLogin1" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketCC_UserLogin" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketComment_UserLogin" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketComment_UserLogin1" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMeetingDetail_TS_TicketMeeting" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMeetingDetail_UserLogin" />
+        <AssociationConnector Association="TicketSystemModel.FK_Sec_UserLoginHistory_UserLogin" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_ChatLogReadDetail" Width="1.5" PointX="17.25" PointY="25.75" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_ChatLogReadDetail_TS_ChatLog" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_ChatLogReadDetail_UserLogin" />
+        <EntityTypeShape EntityType="TicketSystemModel.RoleStatusMapping" Width="1.5" PointX="13.5" PointY="10.5" />
+        <AssociationConnector Association="TicketSystemModel.FK_RoleStatusMapping_Role" />
+        <AssociationConnector Association="TicketSystemModel.FK_RoleStatusMapping_TS_Setup_TicketStatus" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_TypeOfIssue" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_TicketDetail" Width="1.5" PointX="16.5" PointY="12.875" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_TicketMaster" Width="1.5" PointX="19.75" PointY="26.125" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMaster_Customer" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketDetail_Setup_Department" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMaster_Setup_Department" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_Priority" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestMode" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestType" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestTypeCategory" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestTypeSubcategory" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_TicketLevel" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketDetail_TS_Setup_TicketStatus" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_TicketStatus" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_TicketType" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TaskMaster_TS_TicketMaster" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketDetail_TS_TicketMaster" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketDetail_UserLogin" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMaster_UserLogin" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMaster_UserLogin1" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_TicketMeeting_TS_TicketMaster" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_TypeOfComplaint" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_ProductSubCategory" Width="1.5" PointX="7.625" PointY="13.875" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_Setup_ProductSubCategory_TS_Setup_TypeOfIssue" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_City" Width="1.5" PointX="3" PointY="44" />
+        <AssociationConnector Association="TicketSystemModel.FK_TS_Setup_City_Customer_City" />
+        <EntityTypeShape EntityType="TicketSystemModel.Setup_TicketPreRequisite_Values" Width="1.5" PointX="13.375" PointY="4.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.Setup_RequestTypeSubcategoryFieldType" Width="1.5" PointX="13.375" PointY="14.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.Setup_RequestTypeSubcategoryFieldTypeDetail" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.Setup_RequestTypeSubcategoryFieldValue" Width="1.5" PointX="15.375" PointY="5.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_ReportedBy" Width="1.5" PointX="17.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TicketSystemModel.TS_Setup_TicketPreRequisiteValuesType" Width="1.5" PointX="17.375" PointY="4.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

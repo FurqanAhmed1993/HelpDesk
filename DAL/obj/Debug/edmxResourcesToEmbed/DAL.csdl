@@ -1,0 +1,2695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TicketSystemModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TicketSystemEntities" p1:LazyLoadingEnabled="true">
+    <FunctionImport Name="CircuitTypewiseClientCount" ReturnType="Collection(TicketSystemModel.CircuitTypewiseClientCount_Result)" />
+    <FunctionImport Name="CircuitTypewiseClientRegionCount" ReturnType="Collection(TicketSystemModel.CircuitTypewiseClientRegionCount_Result)" />
+    <FunctionImport Name="Client_Last60Day" ReturnType="Collection(TicketSystemModel.Client_Last60Day_Result)" />
+    <FunctionImport Name="ComplainDetail_Report" ReturnType="Collection(TicketSystemModel.ComplainDetail_Report_Result)">
+      <Parameter Name="LOCATIONID" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+      <Parameter Name="BranchCode" Mode="In" Type="String" />
+      <Parameter Name="AreaId" Mode="In" Type="Int32" />
+      <Parameter Name="VendorId" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="ComplainDetail_Report_bakup" ReturnType="Collection(TicketSystemModel.ComplainDetail_Report_bakup_Result)">
+      <Parameter Name="LOCATIONID" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+      <Parameter Name="BranchCode" Mode="In" Type="String" />
+      <Parameter Name="AreaId" Mode="In" Type="Int32" />
+      <Parameter Name="VendorId" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="ComplainDetail_Report_NEW" ReturnType="Collection(TicketSystemModel.ComplainDetail_Report_NEW_Result)">
+      <Parameter Name="LOCATIONID" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+      <Parameter Name="BranchCode" Mode="In" Type="String" />
+      <Parameter Name="Vendor" Mode="In" Type="String" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="ComplainsVisits_Report" ReturnType="Collection(TicketSystemModel.ComplainsVisits_Report_Result)">
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="ComplainsVisits_Report_NEW" ReturnType="Collection(TicketSystemModel.ComplainsVisits_Report_NEW_Result)">
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Get_Bulletin_POCEmail" ReturnType="Collection(TicketSystemModel.Get_Bulletin_POCEmail_Result)">
+      <Parameter Name="ClientID" Mode="In" Type="String" />
+      <Parameter Name="ClientDetailID" Mode="In" Type="String" />
+      <Parameter Name="LocationID" Mode="In" Type="String" />
+      <Parameter Name="RegionID" Mode="In" Type="String" />
+      <Parameter Name="ProductId" Mode="In" Type="String" />
+      <Parameter Name="ExchangePOPId" Mode="In" Type="String" />
+      <Parameter Name="EmailTypeId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetDC_Setup_ExchangePOP" ReturnType="Collection(TicketSystemModel.GetDC_Setup_ExchangePOP_Result)">
+      <Parameter Name="regionid" Mode="In" Type="Int32" />
+      <Parameter Name="LocationId" Mode="In" Type="Int32" />
+      <Parameter Name="Productid" Mode="In" Type="Int32" />
+      <Parameter Name="ExchangePOP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetGlobelSerach" ReturnType="Collection(TicketSystemModel.GetGlobelSerach_Result)">
+      <Parameter Name="Productid" Mode="In" Type="Int32" />
+      <Parameter Name="regionid" Mode="In" Type="Int32" />
+      <Parameter Name="LocationId" Mode="In" Type="Int32" />
+      <Parameter Name="ExchangePOPid" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerTypeid" Mode="In" Type="Int32" />
+      <Parameter Name="Clientid" Mode="In" Type="Int32" />
+      <Parameter Name="CAMNo" Mode="In" Type="String" />
+      <Parameter Name="IPAddress" Mode="In" Type="String" />
+      <Parameter Name="BranchCode" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetGlobelSerach1_Backup_20160810" ReturnType="Collection(TicketSystemModel.GetGlobelSerach1_Backup_20160810_Result)">
+      <Parameter Name="Productid" Mode="In" Type="Int32" />
+      <Parameter Name="regionid" Mode="In" Type="Int32" />
+      <Parameter Name="LocationId" Mode="In" Type="Int32" />
+      <Parameter Name="ExchangePOPid" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerTypeid" Mode="In" Type="Int32" />
+      <Parameter Name="Clientid" Mode="In" Type="Int32" />
+      <Parameter Name="ClientName" Mode="In" Type="String" />
+      <Parameter Name="POCName" Mode="In" Type="String" />
+      <Parameter Name="POCEmail" Mode="In" Type="String" />
+      <Parameter Name="POCContact" Mode="In" Type="String" />
+      <Parameter Name="CAMNo" Mode="In" Type="String" />
+      <Parameter Name="IPAddress" Mode="In" Type="String" />
+      <Parameter Name="BranchCode" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="ProductStatusId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetIONSerach" ReturnType="Collection(TicketSystemModel.GetIONSerach_Result)">
+      <Parameter Name="Regionid" Mode="In" Type="Int32" />
+      <Parameter Name="LocationId" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerTypeid" Mode="In" Type="Int32" />
+      <Parameter Name="Clientid" Mode="In" Type="Int32" />
+      <Parameter Name="CircuitTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="ExchangePOPid" Mode="In" Type="Int32" />
+      <Parameter Name="UserId" Mode="In" Type="String" />
+      <Parameter Name="Slot" Mode="In" Type="String" />
+      <Parameter Name="PON" Mode="In" Type="String" />
+      <Parameter Name="ONT" Mode="In" Type="String" />
+      <Parameter Name="ONTMCSerialNo" Mode="In" Type="String" />
+      <Parameter Name="ONTMCType" Mode="In" Type="String" />
+      <Parameter Name="IPAddress" Mode="In" Type="String" />
+      <Parameter Name="CAMNo" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ManagedServiceDetailReport" ReturnType="Collection(TicketSystemModel.ManagedServiceDetailReport_Result)">
+      <Parameter Name="LocationID" Mode="In" Type="Int32" />
+      <Parameter Name="RegionId" Mode="In" Type="Int32" />
+      <Parameter Name="ProductId" Mode="In" Type="Int32" />
+      <Parameter Name="CircuitType" Mode="In" Type="Int32" />
+      <Parameter Name="AccountManager" Mode="In" Type="String" />
+      <Parameter Name="ClientID" Mode="In" Type="Int32" />
+      <Parameter Name="CamNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="OutageSummary_Report">
+      <Parameter Name="Vendor" Mode="In" Type="String" />
+      <Parameter Name="CustomerId" Mode="In" Type="String" />
+      <Parameter Name="LocationId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="OutageSummary_Report_NEW">
+      <Parameter Name="Vendor" Mode="In" Type="String" />
+      <Parameter Name="CustomerId" Mode="In" Type="String" />
+      <Parameter Name="LocationId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ProductStatus" ReturnType="Collection(TicketSystemModel.ProductStatus_Result)" />
+    <FunctionImport Name="RegionClientCount" ReturnType="Collection(TicketSystemModel.RegionClientCount_Result)" />
+    <FunctionImport Name="RoleAccess_Select" ReturnType="Collection(TicketSystemModel.RoleAccess_Select_Result)">
+      <Parameter Name="Role_Code" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="RoleAccess_SelectByApplicationid" ReturnType="Collection(TicketSystemModel.RoleAccess_SelectByApplicationid_Result)">
+      <Parameter Name="Role_Code" Mode="In" Type="Int32" />
+      <Parameter Name="ApplicationID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(TicketSystemModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(TicketSystemModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="split" IsComposable="true" ReturnType="Collection(String)">
+      <Parameter Name="list" Mode="In" Type="String" />
+      <Parameter Name="delimiter" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Summary" ReturnType="Collection(TicketSystemModel.Summary_Result)" />
+    <FunctionImport Name="SummaryReport">
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+      <Parameter Name="LocationId" Mode="In" Type="String" />
+      <Parameter Name="RegionId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TOPAccountManagerClientwise" ReturnType="Collection(TicketSystemModel.TOPAccountManagerClientwise_Result)" />
+    <FunctionImport Name="TOPAccountManagerProductwise" ReturnType="Collection(TicketSystemModel.TOPAccountManagerProductwise_Result)" />
+    <FunctionImport Name="TOPBackupClient" ReturnType="Collection(TicketSystemModel.TOPBackupClient_Result)" />
+    <FunctionImport Name="TOPBackupLinkProduct" ReturnType="Collection(TicketSystemModel.TOPBackupLinkProduct_Result)" />
+    <FunctionImport Name="TOPClient" ReturnType="Collection(TicketSystemModel.TOPClient_Result)" />
+    <FunctionImport Name="TOPCustomerType" ReturnType="Collection(TicketSystemModel.TOPCustomerType_Result)" />
+    <FunctionImport Name="TOPExchangePOP" ReturnType="Collection(TicketSystemModel.TOPExchangePOP_Result)" />
+    <FunctionImport Name="TOPLocation" ReturnType="Collection(TicketSystemModel.TOPLocation_Result)" />
+    <FunctionImport Name="TOPPrimaryClient" ReturnType="Collection(TicketSystemModel.TOPPrimaryClient_Result)" />
+    <FunctionImport Name="TOPPrimaryLinkProduct" ReturnType="Collection(TicketSystemModel.TOPPrimaryLinkProduct_Result)" />
+    <FunctionImport Name="TOPProduct" ReturnType="Collection(TicketSystemModel.TOPProduct_Result)" />
+    <FunctionImport Name="TOPProductLink" ReturnType="Collection(TicketSystemModel.TOPProductLink_Result)" />
+    <FunctionImport Name="TOPRegionClient" />
+    <FunctionImport Name="TOPVendorLink" ReturnType="Collection(TicketSystemModel.TOPVendorLink_Result)" />
+    <FunctionImport Name="TOPVendorRegionwise" />
+    <FunctionImport Name="TS_GetPOCEmailByCustomerId" ReturnType="Collection(String)">
+      <Parameter Name="ClientID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TS_EmployeeHirerarchy" ReturnType="Collection(TicketSystemModel.TS_EmployeeHirerarchy_Result)">
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TS_GET_COMMENTS_HISTORY" ReturnType="Collection(TicketSystemModel.TS_GET_COMMENTS_HISTORY_Result)">
+      <Parameter Name="TicketMasterId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TS_GET_REPLY_RESPONSE_HISTORY" ReturnType="Collection(TicketSystemModel.TS_GET_REPLY_RESPONSE_HISTORY_Result)">
+      <Parameter Name="MasterId" Mode="In" Type="Int32" />
+      <Parameter Name="Type" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetGlobelSerach1_Backup_20170711" ReturnType="Collection(TicketSystemModel.GetGlobelSerach1_Backup_20170711_Result)">
+      <Parameter Name="Productid" Mode="In" Type="Int32" />
+      <Parameter Name="regionid" Mode="In" Type="Int32" />
+      <Parameter Name="LocationId" Mode="In" Type="Int32" />
+      <Parameter Name="ExchangePOPid" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerTypeid" Mode="In" Type="Int32" />
+      <Parameter Name="Clientid" Mode="In" Type="Int32" />
+      <Parameter Name="ClientName" Mode="In" Type="String" />
+      <Parameter Name="POCName" Mode="In" Type="String" />
+      <Parameter Name="POCEmail" Mode="In" Type="String" />
+      <Parameter Name="POCContact" Mode="In" Type="String" />
+      <Parameter Name="CAMNo" Mode="In" Type="String" />
+      <Parameter Name="IPAddress" Mode="In" Type="String" />
+      <Parameter Name="BranchCode" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="ProductStatusId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetGlobelSerach1_Backup_201707111" ReturnType="Collection(TicketSystemModel.GetGlobelSerach1_Backup_201707111_Result)">
+      <Parameter Name="Productid" Mode="In" Type="Int32" />
+      <Parameter Name="regionid" Mode="In" Type="Int32" />
+      <Parameter Name="LocationId" Mode="In" Type="Int32" />
+      <Parameter Name="ExchangePOPid" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerTypeid" Mode="In" Type="Int32" />
+      <Parameter Name="Clientid" Mode="In" Type="Int32" />
+      <Parameter Name="ClientName" Mode="In" Type="String" />
+      <Parameter Name="POCName" Mode="In" Type="String" />
+      <Parameter Name="POCEmail" Mode="In" Type="String" />
+      <Parameter Name="POCContact" Mode="In" Type="String" />
+      <Parameter Name="CAMNo" Mode="In" Type="String" />
+      <Parameter Name="IPAddress" Mode="In" Type="String" />
+      <Parameter Name="BranchCode" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="ProductStatusId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TS_GET_CHAT_HISTORYDETAIL" ReturnType="Collection(TicketSystemModel.TS_GET_CHAT_HISTORYDETAIL_Result)">
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+      <Parameter Name="MasterId" Mode="In" Type="Int32" />
+      <Parameter Name="ChatTypeId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Dashboard_TopFive_CityWise_TicketsCount" ReturnType="Collection(TicketSystemModel.Dashboard_TopFive_CityWise_TicketsCount_Result)" />
+    <FunctionImport Name="Dashboard_TopFive_CustomerWiseTicketsCount" ReturnType="Collection(TicketSystemModel.Dashboard_TopFive_CustomerWiseTicketsCount_Result)" />
+    <FunctionImport Name="Dashboard_TopFive_ProductTicketsCount" ReturnType="Collection(TicketSystemModel.Dashboard_TopFive_ProductTicketsCount_Result)" />
+    <FunctionImport Name="Dashboard_TopFive_UserWise_Relolved_TicketsCount" ReturnType="Collection(TicketSystemModel.Dashboard_TopFive_UserWise_Relolved_TicketsCount_Result)" />
+    <FunctionImport Name="Dashboard_Trend_SevenDays" ReturnType="Collection(TicketSystemModel.Dashboard_Trend_SevenDays_Result)" />
+    <FunctionImport Name="TS_SearchTicket" ReturnType="Collection(TicketSystemModel.TS_SearchTicket_Result)">
+      <Parameter Name="USERID" Mode="In" Type="Int32" />
+      <Parameter Name="InitiatorId" Mode="In" Type="Int32" />
+      <Parameter Name="AssigneeId" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="CusomterId" Mode="In" Type="Int32" />
+      <Parameter Name="AddressId" Mode="In" Type="Int32" />
+      <Parameter Name="PriorityId" Mode="In" Type="Int32" />
+      <Parameter Name="TicketCode" Mode="In" Type="String" />
+      <Parameter Name="IPAddress" Mode="In" Type="String" />
+      <Parameter Name="CAMNO" Mode="In" Type="String" />
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="DepartmentId" Mode="In" Type="Int32" />
+      <Parameter Name="StatusId" Mode="In" Type="String" />
+      <Parameter Name="IsDeptTicket" Mode="In" Type="Boolean" />
+      <Parameter Name="IsUnassigned" Mode="In" Type="Boolean" />
+      <Parameter Name="IsClient" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="GetGlobelSerach1" ReturnType="Collection(TicketSystemModel.GetGlobelSerach1_Result)">
+      <Parameter Name="Productid" Mode="In" Type="Int32" />
+      <Parameter Name="regionid" Mode="In" Type="Int32" />
+      <Parameter Name="LocationId" Mode="In" Type="Int32" />
+      <Parameter Name="ExchangePOPid" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerTypeid" Mode="In" Type="Int32" />
+      <Parameter Name="Clientid" Mode="In" Type="Int32" />
+      <Parameter Name="ClientName" Mode="In" Type="String" />
+      <Parameter Name="POCName" Mode="In" Type="String" />
+      <Parameter Name="POCEmail" Mode="In" Type="String" />
+      <Parameter Name="POCContact" Mode="In" Type="String" />
+      <Parameter Name="CAMNo" Mode="In" Type="String" />
+      <Parameter Name="IPAddress" Mode="In" Type="String" />
+      <Parameter Name="BranchCode" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="ProductStatusId" Mode="In" Type="Int32" />
+      <Parameter Name="CircuitTypeId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="ContactTypes" EntityType="TicketSystemModel.ContactType" />
+    <EntitySet Name="Customers" EntityType="TicketSystemModel.Customer" />
+    <EntitySet Name="MenuItems" EntityType="TicketSystemModel.MenuItem" />
+    <EntitySet Name="Roles" EntityType="TicketSystemModel.Role" />
+    <EntitySet Name="RoleAccesses" EntityType="TicketSystemModel.RoleAccess" />
+    <EntitySet Name="Setup_Application" EntityType="TicketSystemModel.Setup_Application" />
+    <EntitySet Name="Setup_Color" EntityType="TicketSystemModel.Setup_Color" />
+    <EntitySet Name="Setup_Department" EntityType="TicketSystemModel.Setup_Department" />
+    <EntitySet Name="Setup_Designation" EntityType="TicketSystemModel.Setup_Designation" />
+    <EntitySet Name="Setup_Employee" EntityType="TicketSystemModel.Setup_Employee" />
+    <EntitySet Name="sysdiagrams" EntityType="TicketSystemModel.sysdiagram" />
+    <EntitySet Name="TS_ChatLog" EntityType="TicketSystemModel.TS_ChatLog" />
+    <EntitySet Name="TS_MeetingAttachments" EntityType="TicketSystemModel.TS_MeetingAttachments" />
+    <EntitySet Name="TS_Setup_ChatType" EntityType="TicketSystemModel.TS_Setup_ChatType" />
+    <EntitySet Name="TS_Setup_Priority" EntityType="TicketSystemModel.TS_Setup_Priority" />
+    <EntitySet Name="TS_Setup_RequestMode" EntityType="TicketSystemModel.TS_Setup_RequestMode" />
+    <EntitySet Name="TS_Setup_RequestType" EntityType="TicketSystemModel.TS_Setup_RequestType" />
+    <EntitySet Name="TS_Setup_RequestTypeCategory" EntityType="TicketSystemModel.TS_Setup_RequestTypeCategory" />
+    <EntitySet Name="TS_Setup_RequestTypeSubcategory" EntityType="TicketSystemModel.TS_Setup_RequestTypeSubcategory" />
+    <EntitySet Name="TS_Setup_TicketLevel" EntityType="TicketSystemModel.TS_Setup_TicketLevel" />
+    <EntitySet Name="TS_Setup_TicketStatus" EntityType="TicketSystemModel.TS_Setup_TicketStatus" />
+    <EntitySet Name="TS_Setup_TicketType" EntityType="TicketSystemModel.TS_Setup_TicketType" />
+    <EntitySet Name="TS_StatusDetail" EntityType="TicketSystemModel.TS_StatusDetail" />
+    <EntitySet Name="TS_TaskAttachments" EntityType="TicketSystemModel.TS_TaskAttachments" />
+    <EntitySet Name="TS_TaskDetail" EntityType="TicketSystemModel.TS_TaskDetail" />
+    <EntitySet Name="TS_TaskLog" EntityType="TicketSystemModel.TS_TaskLog" />
+    <EntitySet Name="TS_TaskMaster" EntityType="TicketSystemModel.TS_TaskMaster" />
+    <EntitySet Name="TS_TicketAttachments" EntityType="TicketSystemModel.TS_TicketAttachments" />
+    <EntitySet Name="TS_TicketCC" EntityType="TicketSystemModel.TS_TicketCC" />
+    <EntitySet Name="TS_TicketComment" EntityType="TicketSystemModel.TS_TicketComment" />
+    <EntitySet Name="TS_TicketMeeting" EntityType="TicketSystemModel.TS_TicketMeeting" />
+    <EntitySet Name="TS_TicketMeetingDetail" EntityType="TicketSystemModel.TS_TicketMeetingDetail" />
+    <EntitySet Name="TS_TicketTo" EntityType="TicketSystemModel.TS_TicketTo" />
+    <EntitySet Name="UserLogins" EntityType="TicketSystemModel.UserLogin" />
+    <EntitySet Name="UserLoginHistories" EntityType="TicketSystemModel.UserLoginHistory" />
+    <AssociationSet Name="FK__RoleAcces__Menu___3B75D760" Association="TicketSystemModel.FK__RoleAcces__Menu___3B75D760">
+      <End Role="MenuItem" EntitySet="MenuItems" />
+      <End Role="RoleAccess" EntitySet="RoleAccesses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Role_Setup_Application" Association="TicketSystemModel.FK_Role_Setup_Application">
+      <End Role="Setup_Application" EntitySet="Setup_Application" />
+      <End Role="Role" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLogin_Role" Association="TicketSystemModel.FK_UserLogin_Role">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="UserLogin" EntitySet="UserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sec_UserLoginHistory_Setup_Application" Association="TicketSystemModel.FK_Sec_UserLoginHistory_Setup_Application">
+      <End Role="Setup_Application" EntitySet="Setup_Application" />
+      <End Role="UserLoginHistory" EntitySet="UserLoginHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Setup_Application_Setup_Application" Association="TicketSystemModel.FK_Setup_Application_Setup_Application">
+      <End Role="Setup_Application" EntitySet="Setup_Application" />
+      <End Role="Setup_Application1" EntitySet="Setup_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Setup_Employee_Setup_Department" Association="TicketSystemModel.FK_Setup_Employee_Setup_Department">
+      <End Role="Setup_Department" EntitySet="Setup_Department" />
+      <End Role="Setup_Employee" EntitySet="Setup_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskMaster_Setup_Department" Association="TicketSystemModel.FK_TS_TaskMaster_Setup_Department">
+      <End Role="Setup_Department" EntitySet="Setup_Department" />
+      <End Role="TS_TaskMaster" EntitySet="TS_TaskMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Setup_Employee_Setup_Designation" Association="TicketSystemModel.FK_Setup_Employee_Setup_Designation">
+      <End Role="Setup_Designation" EntitySet="Setup_Designation" />
+      <End Role="Setup_Employee" EntitySet="Setup_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Setup_Employee_UserLogin" Association="TicketSystemModel.FK_Setup_Employee_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="Setup_Employee" EntitySet="Setup_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Setup_Employee_UserLogin1" Association="TicketSystemModel.FK_Setup_Employee_UserLogin1">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="Setup_Employee" EntitySet="Setup_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLogin_Setup_Employee" Association="TicketSystemModel.FK_UserLogin_Setup_Employee">
+      <End Role="Setup_Employee" EntitySet="Setup_Employee" />
+      <End Role="UserLogin" EntitySet="UserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Setup_ChatLog_TS_Setup_ChatType" Association="TicketSystemModel.FK_Setup_ChatLog_TS_Setup_ChatType">
+      <End Role="TS_Setup_ChatType" EntitySet="TS_Setup_ChatType" />
+      <End Role="TS_ChatLog" EntitySet="TS_ChatLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Setup_ChatLog_TS_TaskMaster" Association="TicketSystemModel.FK_Setup_ChatLog_TS_TaskMaster">
+      <End Role="TS_TaskMaster" EntitySet="TS_TaskMaster" />
+      <End Role="TS_ChatLog" EntitySet="TS_ChatLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_ChatLog_UserLogin" Association="TicketSystemModel.FK_TS_ChatLog_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_ChatLog" EntitySet="TS_ChatLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_ChatLog_UserLogin1" Association="TicketSystemModel.FK_TS_ChatLog_UserLogin1">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_ChatLog" EntitySet="TS_ChatLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_ChatLog_UserLogin2" Association="TicketSystemModel.FK_TS_ChatLog_UserLogin2">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_ChatLog" EntitySet="TS_ChatLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskMaster_TS_Setup_Priority" Association="TicketSystemModel.FK_TS_TaskMaster_TS_Setup_Priority">
+      <End Role="TS_Setup_Priority" EntitySet="TS_Setup_Priority" />
+      <End Role="TS_TaskMaster" EntitySet="TS_TaskMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_Setup_RequestTypeCategory_TS_Setup_RequestType" Association="TicketSystemModel.FK_TS_Setup_RequestTypeCategory_TS_Setup_RequestType">
+      <End Role="TS_Setup_RequestType" EntitySet="TS_Setup_RequestType" />
+      <End Role="TS_Setup_RequestTypeCategory" EntitySet="TS_Setup_RequestTypeCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_Setup_RequestTypeSubcategory_TS_Setup_RequestTypeCategory" Association="TicketSystemModel.FK_TS_Setup_RequestTypeSubcategory_TS_Setup_RequestTypeCategory">
+      <End Role="TS_Setup_RequestTypeCategory" EntitySet="TS_Setup_RequestTypeCategory" />
+      <End Role="TS_Setup_RequestTypeSubcategory" EntitySet="TS_Setup_RequestTypeSubcategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_StatusDetail_TS_Setup_TicketStatus" Association="TicketSystemModel.FK_TS_StatusDetail_TS_Setup_TicketStatus">
+      <End Role="TS_Setup_TicketStatus" EntitySet="TS_Setup_TicketStatus" />
+      <End Role="TS_StatusDetail" EntitySet="TS_StatusDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskDetail_TS_Setup_TicketStatus" Association="TicketSystemModel.FK_TS_TaskDetail_TS_Setup_TicketStatus">
+      <End Role="TS_Setup_TicketStatus" EntitySet="TS_Setup_TicketStatus" />
+      <End Role="TS_TaskDetail" EntitySet="TS_TaskDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskLog_TS_Setup_TicketStatus" Association="TicketSystemModel.FK_TS_TaskLog_TS_Setup_TicketStatus">
+      <End Role="TS_Setup_TicketStatus" EntitySet="TS_Setup_TicketStatus" />
+      <End Role="TS_TaskLog" EntitySet="TS_TaskLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskMaster_TS_Setup_TicketStatus" Association="TicketSystemModel.FK_TS_TaskMaster_TS_Setup_TicketStatus">
+      <End Role="TS_Setup_TicketStatus" EntitySet="TS_Setup_TicketStatus" />
+      <End Role="TS_TaskMaster" EntitySet="TS_TaskMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskDetail_TS_TaskMaster" Association="TicketSystemModel.FK_TS_TaskDetail_TS_TaskMaster">
+      <End Role="TS_TaskMaster" EntitySet="TS_TaskMaster" />
+      <End Role="TS_TaskDetail" EntitySet="TS_TaskDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskDetail_UserLogin" Association="TicketSystemModel.FK_TS_TaskDetail_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_TaskDetail" EntitySet="TS_TaskDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskDetail_UserLogin1" Association="TicketSystemModel.FK_TS_TaskDetail_UserLogin1">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_TaskDetail" EntitySet="TS_TaskDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskLog_TS_TaskDetail1" Association="TicketSystemModel.FK_TS_TaskLog_TS_TaskDetail1">
+      <End Role="TS_TaskDetail" EntitySet="TS_TaskDetail" />
+      <End Role="TS_TaskLog" EntitySet="TS_TaskLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskLog_TS_TaskDetail" Association="TicketSystemModel.FK_TS_TaskLog_TS_TaskDetail">
+      <End Role="TS_TaskMaster" EntitySet="TS_TaskMaster" />
+      <End Role="TS_TaskLog" EntitySet="TS_TaskLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskLog_TS_TaskMaster" Association="TicketSystemModel.FK_TS_TaskLog_TS_TaskMaster">
+      <End Role="TS_TaskMaster" EntitySet="TS_TaskMaster" />
+      <End Role="TS_TaskLog" EntitySet="TS_TaskLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskLog_UserLogin" Association="TicketSystemModel.FK_TS_TaskLog_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_TaskLog" EntitySet="TS_TaskLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskMaster_UserLogin" Association="TicketSystemModel.FK_TS_TaskMaster_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_TaskMaster" EntitySet="TS_TaskMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskMaster_UserLogin1" Association="TicketSystemModel.FK_TS_TaskMaster_UserLogin1">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_TaskMaster" EntitySet="TS_TaskMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketCC_UserLogin" Association="TicketSystemModel.FK_TS_TicketCC_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_TicketCC" EntitySet="TS_TicketCC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketComment_UserLogin" Association="TicketSystemModel.FK_TS_TicketComment_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_TicketComment" EntitySet="TS_TicketComment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketComment_UserLogin1" Association="TicketSystemModel.FK_TS_TicketComment_UserLogin1">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_TicketComment" EntitySet="TS_TicketComment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMeetingDetail_TS_TicketMeeting" Association="TicketSystemModel.FK_TS_TicketMeetingDetail_TS_TicketMeeting">
+      <End Role="TS_TicketMeeting" EntitySet="TS_TicketMeeting" />
+      <End Role="TS_TicketMeetingDetail" EntitySet="TS_TicketMeetingDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMeetingDetail_UserLogin" Association="TicketSystemModel.FK_TS_TicketMeetingDetail_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_TicketMeetingDetail" EntitySet="TS_TicketMeetingDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sec_UserLoginHistory_UserLogin" Association="TicketSystemModel.FK_Sec_UserLoginHistory_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="UserLoginHistory" EntitySet="UserLoginHistories" />
+    </AssociationSet>
+    <FunctionImport Name="Dashboard_GetAllChat" ReturnType="Collection(String)">
+      <Parameter Name="FromUser" Mode="In" Type="Int32" />
+      <Parameter Name="ToUser" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="TS_ChatLogReadDetail" EntityType="TicketSystemModel.TS_ChatLogReadDetail" />
+    <AssociationSet Name="FK_TS_ChatLogReadDetail_TS_ChatLog" Association="TicketSystemModel.FK_TS_ChatLogReadDetail_TS_ChatLog">
+      <End Role="TS_ChatLog" EntitySet="TS_ChatLog" />
+      <End Role="TS_ChatLogReadDetail" EntitySet="TS_ChatLogReadDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_ChatLogReadDetail_UserLogin" Association="TicketSystemModel.FK_TS_ChatLogReadDetail_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_ChatLogReadDetail" EntitySet="TS_ChatLogReadDetail" />
+    </AssociationSet>
+    <FunctionImport Name="Dashboard_PriorityWiseTicketsCount" ReturnType="Collection(TicketSystemModel.Dashboard_PriorityWiseTicketsCount_Result1)" />
+    <EntitySet Name="RoleStatusMappings" EntityType="TicketSystemModel.RoleStatusMapping" />
+    <AssociationSet Name="FK_RoleStatusMapping_Role" Association="TicketSystemModel.FK_RoleStatusMapping_Role">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="RoleStatusMapping" EntitySet="RoleStatusMappings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleStatusMapping_TS_Setup_TicketStatus" Association="TicketSystemModel.FK_RoleStatusMapping_TS_Setup_TicketStatus">
+      <End Role="TS_Setup_TicketStatus" EntitySet="TS_Setup_TicketStatus" />
+      <End Role="RoleStatusMapping" EntitySet="RoleStatusMappings" />
+    </AssociationSet>
+    <FunctionImport Name="TS_Populate_Ticket_code" ReturnType="Collection(String)" />
+    <EntitySet Name="TS_Setup_TypeOfIssue" EntityType="TicketSystemModel.TS_Setup_TypeOfIssue" />
+    <EntitySet Name="TS_TicketDetail" EntityType="TicketSystemModel.TS_TicketDetail" />
+    <EntitySet Name="TS_TicketMaster" EntityType="TicketSystemModel.TS_TicketMaster" />
+    <AssociationSet Name="FK_TS_TicketMaster_Customer" Association="TicketSystemModel.FK_TS_TicketMaster_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketDetail_Setup_Department" Association="TicketSystemModel.FK_TS_TicketDetail_Setup_Department">
+      <End Role="Setup_Department" EntitySet="Setup_Department" />
+      <End Role="TS_TicketDetail" EntitySet="TS_TicketDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMaster_Setup_Department" Association="TicketSystemModel.FK_TS_TicketMaster_Setup_Department">
+      <End Role="Setup_Department" EntitySet="Setup_Department" />
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMaster_TS_Setup_Priority" Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_Priority">
+      <End Role="TS_Setup_Priority" EntitySet="TS_Setup_Priority" />
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMaster_TS_Setup_RequestMode" Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestMode">
+      <End Role="TS_Setup_RequestMode" EntitySet="TS_Setup_RequestMode" />
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMaster_TS_Setup_RequestType" Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestType">
+      <End Role="TS_Setup_RequestType" EntitySet="TS_Setup_RequestType" />
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMaster_TS_Setup_RequestTypeCategory" Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestTypeCategory">
+      <End Role="TS_Setup_RequestTypeCategory" EntitySet="TS_Setup_RequestTypeCategory" />
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMaster_TS_Setup_RequestTypeSubcategory" Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestTypeSubcategory">
+      <End Role="TS_Setup_RequestTypeSubcategory" EntitySet="TS_Setup_RequestTypeSubcategory" />
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMaster_TS_Setup_TicketLevel" Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_TicketLevel">
+      <End Role="TS_Setup_TicketLevel" EntitySet="TS_Setup_TicketLevel" />
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketDetail_TS_Setup_TicketStatus" Association="TicketSystemModel.FK_TS_TicketDetail_TS_Setup_TicketStatus">
+      <End Role="TS_Setup_TicketStatus" EntitySet="TS_Setup_TicketStatus" />
+      <End Role="TS_TicketDetail" EntitySet="TS_TicketDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMaster_TS_Setup_TicketStatus" Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_TicketStatus">
+      <End Role="TS_Setup_TicketStatus" EntitySet="TS_Setup_TicketStatus" />
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMaster_TS_Setup_TicketType" Association="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_TicketType">
+      <End Role="TS_Setup_TicketType" EntitySet="TS_Setup_TicketType" />
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TaskMaster_TS_TicketMaster" Association="TicketSystemModel.FK_TS_TaskMaster_TS_TicketMaster">
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+      <End Role="TS_TaskMaster" EntitySet="TS_TaskMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketDetail_TS_TicketMaster" Association="TicketSystemModel.FK_TS_TicketDetail_TS_TicketMaster">
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+      <End Role="TS_TicketDetail" EntitySet="TS_TicketDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketDetail_UserLogin" Association="TicketSystemModel.FK_TS_TicketDetail_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_TicketDetail" EntitySet="TS_TicketDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMaster_UserLogin" Association="TicketSystemModel.FK_TS_TicketMaster_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMaster_UserLogin1" Association="TicketSystemModel.FK_TS_TicketMaster_UserLogin1">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TS_TicketMeeting_TS_TicketMaster" Association="TicketSystemModel.FK_TS_TicketMeeting_TS_TicketMaster">
+      <End Role="TS_TicketMaster" EntitySet="TS_TicketMaster" />
+      <End Role="TS_TicketMeeting" EntitySet="TS_TicketMeeting" />
+    </AssociationSet>
+    <EntitySet Name="TS_Setup_TypeOfComplaint" EntityType="TicketSystemModel.TS_Setup_TypeOfComplaint" />
+    <EntitySet Name="TS_Setup_ProductSubCategory" EntityType="TicketSystemModel.TS_Setup_ProductSubCategory" />
+    <AssociationSet Name="FK_TS_Setup_ProductSubCategory_TS_Setup_TypeOfIssue" Association="TicketSystemModel.FK_TS_Setup_ProductSubCategory_TS_Setup_TypeOfIssue">
+      <End Role="TS_Setup_TypeOfIssue" EntitySet="TS_Setup_TypeOfIssue" />
+      <End Role="TS_Setup_ProductSubCategory" EntitySet="TS_Setup_ProductSubCategory" />
+    </AssociationSet>
+    <EntitySet Name="TS_Setup_City" EntityType="TicketSystemModel.TS_Setup_City" />
+    <AssociationSet Name="FK_TS_Setup_City_Customer_City" Association="TicketSystemModel.FK_TS_Setup_City_Customer_City">
+      <End Role="TS_Setup_City" EntitySet="TS_Setup_City" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <EntitySet Name="Setup_TicketPreRequisite_Values" EntityType="TicketSystemModel.Setup_TicketPreRequisite_Values" />
+    <EntitySet Name="Setup_RequestTypeSubcategoryFieldType" EntityType="TicketSystemModel.Setup_RequestTypeSubcategoryFieldType" />
+    <EntitySet Name="Setup_RequestTypeSubcategoryFieldTypeDetail" EntityType="TicketSystemModel.Setup_RequestTypeSubcategoryFieldTypeDetail" />
+    <EntitySet Name="Setup_RequestTypeSubcategoryFieldValue" EntityType="TicketSystemModel.Setup_RequestTypeSubcategoryFieldValue" />
+    <EntitySet Name="TS_Setup_ReportedBy" EntityType="TicketSystemModel.TS_Setup_ReportedBy" />
+    <EntitySet Name="TS_Setup_TicketPreRequisiteValuesType" EntityType="TicketSystemModel.TS_Setup_TicketPreRequisiteValuesType" />
+  </EntityContainer>
+  <ComplexType Name="CircuitTypewiseClientCount_Result">
+    <Property Type="String" Name="CircuitType" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Client" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CircuitTypewiseClientRegionCount_Result">
+    <Property Type="String" Name="CircuitType" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="REGION" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Client" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Client_Last60Day_Result">
+    <Property Type="DateTime" Name="Createddate" Nullable="true" />
+    <Property Type="Int32" Name="Clients" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ComplainDetail_Report_Result">
+    <Property Type="String" Name="VendorName" Nullable="true" />
+    <Property Type="String" Name="CustomerName" Nullable="false" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CustomerArea" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="BranchCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPAddress" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="LinkId" Nullable="true" />
+    <Property Type="String" Name="TicketNumber" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="ComplainTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ResolutionTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Duration_HH_" Nullable="true" MaxLength="17" />
+    <Property Type="String" Name="RFO" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ComplainDetail_Report_bakup_Result">
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CustomerArea" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="BranchCode" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="IPAddress" Nullable="true" />
+    <Property Type="String" Name="LinkId" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TicketNumber" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="ComplainTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ResolutionTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Duration_HH_" Nullable="true" MaxLength="17" />
+    <Property Type="String" Name="RFO" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ComplainDetail_Report_NEW_Result">
+    <Property Type="String" Name="VendorName" Nullable="true" />
+    <Property Type="String" Name="CustomerName" Nullable="false" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CustomerArea" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="BranchCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPAddress" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="LinkId" Nullable="true" />
+    <Property Type="String" Name="TicketNumber" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="ComplainTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ResolutionTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Duration_HH_" Nullable="true" MaxLength="17" />
+    <Property Type="String" Name="RFO" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ComplainsVisits_Report_Result">
+    <Property Type="String" Name="ServiceType" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="VisitType" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="Region" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="EmployeeCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EmployeeName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="Product" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CAM_Number" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="ComplainTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="ResolutionTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="HardwareDeployedSerial_Number" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HardwareDismantleSerial_Number" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VendorName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="CustomerArea" Nullable="true" />
+    <Property Type="String" Name="Duration_HH_" Nullable="true" MaxLength="92" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ComplainsVisits_Report_NEW_Result">
+    <Property Type="String" Name="ServiceType" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="VisitType" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="Region" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="EmployeeCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EmployeeName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="Product" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CAM_Number" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="ComplainTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="ResolutionTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="HardwareDeployedSerial_Number" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HardwareDismantleSerial_Number" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VendorName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="CustomerArea" Nullable="true" />
+    <Property Type="String" Name="Duration_HH_" Nullable="true" MaxLength="92" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Get_Bulletin_POCEmail_Result">
+    <Property Type="String" Name="POCName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="POCEmail" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetDC_Setup_ExchangePOP_Result">
+    <Property Type="String" Name="Region" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Regionid" Nullable="true" />
+    <Property Type="Int32" Name="Cityid" Nullable="true" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="ProductId" Nullable="true" />
+    <Property Type="String" Name="Product" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="ExchangePOPId" Nullable="false" />
+    <Property Type="String" Name="ExchangePOP" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="GetGlobelSerach_Result">
+    <Property Type="Int32" Name="ManageSevicesMasterId" Nullable="false" />
+    <Property Type="Int32" Name="ProductId" Nullable="true" />
+    <Property Type="Int32" Name="Masterid" Nullable="false" />
+    <Property Type="String" Name="Product" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Region" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CustomerType" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Client" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="CAM" Nullable="true" />
+    <Property Type="String" Name="IP" Nullable="true" />
+    <Property Type="String" Name="Exchange_POP" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Branch_Code" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetGlobelSerach1_Backup_20160810_Result">
+    <Property Type="Int32" Name="ManageSevicesMasterId" Nullable="false" />
+    <Property Type="Int32" Name="ProductId" Nullable="true" />
+    <Property Type="Int32" Name="Masterid" Nullable="false" />
+    <Property Type="String" Name="Product" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Region" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CustomerType" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Client" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="CAM" Nullable="true" />
+    <Property Type="String" Name="IP" Nullable="true" />
+    <Property Type="String" Name="Exchange_POP" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Branch_Code" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Secondary_IP" Nullable="true" />
+    <Property Type="String" Name="pocs" Nullable="true" />
+    <Property Type="String" Name="ProductStatus" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetIONSerach_Result">
+    <Property Type="Int32" Name="MasterID" Nullable="false" />
+    <Property Type="String" Name="Region" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Location" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CustomerType" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Client" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="CircuitType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ExchangePOP" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CAM" Nullable="true" />
+    <Property Type="String" Name="ION_UserID" Nullable="true" />
+    <Property Type="String" Name="Slot" Nullable="true" />
+    <Property Type="String" Name="PON" Nullable="true" />
+    <Property Type="String" Name="ONT" Nullable="true" />
+    <Property Type="String" Name="ONT_MCSerialno" Nullable="true" />
+    <Property Type="String" Name="ONT_MCType" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ManagedServiceDetailReport_Result">
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="Int32" Name="clientid" Nullable="true" />
+    <Property Type="String" Name="Product" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Region" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="ExchangePOP" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="AccountManager" Nullable="true" />
+    <Property Type="String" Name="BranchCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CAMNo" Nullable="true" />
+    <Property Type="String" Name="IPAddress" Nullable="true" />
+    <Property Type="String" Name="ProductStatus" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CircuitType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BandWidth" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ProductStatus_Result">
+    <Property Type="String" Name="PRODUCT" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProductStatus" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Link" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="RegionClientCount_Result">
+    <Property Type="String" Name="Region" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Client" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="RoleAccess_Select_Result">
+    <Property Type="Int32" Name="Menu_Item_Code" Nullable="false" />
+    <Property Type="String" Name="Menu_Item_Name" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Menu_URL" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Parent_Menu_Item_Code" Nullable="true" />
+    <Property Type="DateTime" Name="Created_Date" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Is_Active" Nullable="true" />
+    <Property Type="Boolean" Name="Is_Displayed_In_Menu" Nullable="true" />
+    <Property Type="Int32" Name="User_Code" Nullable="true" />
+    <Property Type="DateTime" Name="Modified_Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="User_IP" Nullable="true" MaxLength="25" />
+    <Property Type="Int32" Name="Company_Code" Nullable="true" />
+    <Property Type="Int32" Name="SortOrder" Nullable="true" />
+    <Property Type="Int32" Name="ApplicationID" Nullable="true" />
+    <Property Type="Boolean" Name="Has_Access" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="RoleAccess_SelectByApplicationid_Result">
+    <Property Type="Int32" Name="Menu_Item_Code" Nullable="false" />
+    <Property Type="String" Name="Menu_Item_Name" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Menu_URL" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Parent_Menu_Item_Code" Nullable="true" />
+    <Property Type="DateTime" Name="Created_Date" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Is_Active" Nullable="true" />
+    <Property Type="Boolean" Name="Is_Displayed_In_Menu" Nullable="true" />
+    <Property Type="Int32" Name="User_Code" Nullable="true" />
+    <Property Type="DateTime" Name="Modified_Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="User_IP" Nullable="true" MaxLength="25" />
+    <Property Type="Int32" Name="Company_Code" Nullable="true" />
+    <Property Type="Int32" Name="SortOrder" Nullable="true" />
+    <Property Type="Int32" Name="ApplicationID" Nullable="true" />
+    <Property Type="Boolean" Name="Has_Access" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Summary_Result">
+    <Property Type="Int32" Name="TotalClients" Nullable="true" />
+    <Property Type="String" Name="TopClientProductwise" Nullable="true" />
+    <Property Type="String" Name="TopClientLinkwise" Nullable="true" />
+    <Property Type="String" Name="TopClientLocationwise" Nullable="true" />
+    <Property Type="String" Name="TopLocationClient" Nullable="true" MaxLength="511" />
+    <Property Type="String" Name="TOPProductClient" Nullable="true" MaxLength="511" />
+    <Property Type="Int32" Name="TotalPrimayLink" Nullable="true" />
+    <Property Type="Int32" Name="TotalBackupLink" Nullable="true" />
+    <Property Type="Int32" Name="TotalUnknownLink" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TOPAccountManagerClientwise_Result">
+    <Property Type="String" Name="AccountManager" Nullable="false" />
+    <Property Type="Int32" Name="Clients" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TOPAccountManagerProductwise_Result">
+    <Property Type="String" Name="AccountManager" Nullable="false" />
+    <Property Type="Int32" Name="Products" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TOPBackupClient_Result">
+    <Property Type="String" Name="Client" Nullable="false" />
+    <Property Type="Int32" Name="BackupLink" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TOPBackupLinkProduct_Result">
+    <Property Type="String" Name="Product" Nullable="false" MaxLength="12" />
+    <Property Type="Int32" Name="BackupLink" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TOPClient_Result">
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="Int32" Name="Products" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TOPCustomerType_Result">
+    <Property Type="Int32" Name="CustomerTypeId" Nullable="false" />
+    <Property Type="String" Name="CustomerType" Nullable="false" MaxLength="500" />
+    <Property Type="Int32" Name="Clients" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TOPExchangePOP_Result">
+    <Property Type="Int32" Name="ExchangePOPId" Nullable="false" />
+    <Property Type="String" Name="ExchangePOP" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Clients" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TOPLocation_Result">
+    <Property Type="Int32" Name="LocationId" Nullable="true" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Clients" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TOPPrimaryClient_Result">
+    <Property Type="String" Name="Client" Nullable="false" />
+    <Property Type="Int32" Name="PrimaryLink" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TOPPrimaryLinkProduct_Result">
+    <Property Type="String" Name="Product" Nullable="false" MaxLength="12" />
+    <Property Type="Int32" Name="PrimaryLink" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TOPProduct_Result">
+    <Property Type="String" Name="Product" Nullable="false" MaxLength="500" />
+    <Property Type="Int32" Name="Clients" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TOPProductLink_Result">
+    <Property Type="String" Name="Product" Nullable="false" MaxLength="500" />
+    <Property Type="Int32" Name="Clients" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TOPVendorLink_Result">
+    <Property Type="String" Name="Vendor" Nullable="true" />
+    <Property Type="Int32" Name="link" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TS_EmployeeHirerarchy_Result">
+    <Property Type="Int32" Name="emp_Id" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="InchargeId" Nullable="true" />
+    <Property Type="String" Name="Manager" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="EmpLevel" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TS_GET_COMMENTS_HISTORY_Result">
+    <Property Type="Int32" Name="TicketCommentId" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="String" Name="CommentBy" Nullable="true" MaxLength="163" />
+    <Property Type="String" Name="Date" Nullable="true" MaxLength="19" />
+  </ComplexType>
+  <ComplexType Name="TS_GET_REPLY_RESPONSE_HISTORY_Result">
+    <Property Type="Int32" Name="TicketLogId" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ReplyResponse" Nullable="false" />
+    <Property Type="String" Name="ReplyResponseText" Nullable="false" MaxLength="13" />
+    <Property Type="String" Name="ReplyResponseBy" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Date" Nullable="true" MaxLength="19" />
+  </ComplexType>
+  <ComplexType Name="GetGlobelSerach1_Backup_20170711_Result">
+    <Property Type="Int32" Name="ManageSevicesMasterId" Nullable="false" />
+    <Property Type="Int32" Name="ProductId" Nullable="true" />
+    <Property Type="Int32" Name="Masterid" Nullable="false" />
+    <Property Type="String" Name="Product" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Region" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CustomerType" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Client" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="CAM" Nullable="true" />
+    <Property Type="String" Name="IP" Nullable="true" />
+    <Property Type="String" Name="Exchange_POP" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Branch_Code" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Secondary_IP" Nullable="true" />
+    <Property Type="String" Name="pocs" Nullable="true" />
+    <Property Type="String" Name="ProductStatus" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetGlobelSerach1_Backup_201707111_Result">
+    <Property Type="Int32" Name="ManageSevicesMasterId" Nullable="false" />
+    <Property Type="Int32" Name="ProductId" Nullable="true" />
+    <Property Type="Int32" Name="Masterid" Nullable="false" />
+    <Property Type="String" Name="Product" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Region" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CustomerType" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Client" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="CAM" Nullable="true" />
+    <Property Type="String" Name="IP" Nullable="true" />
+    <Property Type="String" Name="Exchange_POP" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Branch_Code" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Secondary_IP" Nullable="true" />
+    <Property Type="String" Name="pocs" Nullable="true" />
+    <Property Type="String" Name="ProductStatus" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="TS_GET_CHAT_HISTORYDETAIL_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="IsReply" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ActionBy" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Date" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="ViewedBy" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="FilePath" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Dashboard_PriorityWiseTicketsCount_Result">
+    <Property Type="String" Name="Label" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Count" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Dashboard_TopFive_CityWise_TicketsCount_Result">
+    <Property Type="String" Name="Label" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Count" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Dashboard_TopFive_CustomerWiseTicketsCount_Result">
+    <Property Type="String" Name="Label" Nullable="true" />
+    <Property Type="Int32" Name="Count" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Dashboard_TopFive_ProductTicketsCount_Result">
+    <Property Type="String" Name="Label" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Count" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Dashboard_TopFive_UserWise_Relolved_TicketsCount_Result">
+    <Property Type="String" Name="Label" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="Count" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Dashboard_Trend_SevenDays_Result">
+    <Property Type="DateTime" Name="TrendDate" Nullable="true" />
+    <Property Type="Int32" Name="TicketCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TS_SearchTicket_Result">
+    <Property Type="String" Name="Region" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Product" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CustomerType" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Customer" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="Int32" Name="TicketMasterId" Nullable="false" />
+    <Property Type="String" Name="TicketCode" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="TicketCreationDate" Nullable="false" />
+    <Property Type="Time" Name="TicketCreationTime" Nullable="false" />
+    <Property Type="Int32" Name="InitiatorId" Nullable="true" />
+    <Property Type="String" Name="TicketInitiatorName" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="TicketStatusId" Nullable="false" />
+    <Property Type="String" Name="TicketStatus" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TicketRequestModeId" Nullable="false" />
+    <Property Type="String" Name="TicketRequestMode" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="TicketPriorityId" Nullable="false" />
+    <Property Type="String" Name="TicketPriority" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TicketServiceRequestId" Nullable="true" />
+    <Property Type="String" Name="TicketServiceRequest" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TicketTitle" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="TicketDescription" Nullable="false" MaxLength="Max" />
+    <Property Type="Int32" Name="TicketDepartmentId" Nullable="false" />
+    <Property Type="Int32" Name="TicketAssigneeId" Nullable="true" />
+    <Property Type="String" Name="Assignee" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AssignTo" Nullable="true" MaxLength="425" />
+    <Property Type="String" Name="Department" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="LevelName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="BackgroundColor" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ServiceCategory" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ChatNotificationCount" Nullable="true" />
+    <Property Type="Int32" Name="InternalChatNotificationCount" Nullable="true" />
+    <Property Type="String" Name="PrimaryIP" Nullable="true" />
+    <Property Type="String" Name="CAMNo" Nullable="true" />
+    <Property Type="String" Name="TicketType" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="RequestType" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="LevelId" Nullable="true" />
+    <Property Type="Boolean" Name="IsFlagMark" Nullable="true" />
+    <Property Type="Int32" Name="IsFlagMarkVisible" Nullable="false" />
+    <Property Type="Int32" Name="AccountId" Nullable="true" />
+    <Property Type="Int32" Name="MeetingCount" Nullable="true" />
+    <Property Type="Int32" Name="TaskCount" Nullable="true" />
+    <Property Type="String" Name="IsEdit" Nullable="false" MaxLength="7" />
+    <Property Type="String" Name="ResponseVisible" Nullable="false" MaxLength="7" />
+    <Property Type="String" Name="ClientVisiblity" Nullable="false" MaxLength="7" />
+    <Property Type="Int32" Name="ProductId" Nullable="true" />
+    <Property Type="Int32" Name="ManageSevicesMasterId" Nullable="true" />
+    <Property Type="Int32" Name="Detailid" Nullable="true" />
+    <Property Type="Int32" Name="LinkCount" Nullable="true" />
+    <Property Type="String" Name="LinkHistoryVisibility" Nullable="false" MaxLength="7" />
+    <Property Type="Int32" Name="RFOCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetGlobelSerach1_Result">
+    <Property Type="Int32" Name="ManageSevicesMasterId" Nullable="false" />
+    <Property Type="Int32" Name="ProductId" Nullable="true" />
+    <Property Type="Int32" Name="Masterid" Nullable="false" />
+    <Property Type="String" Name="Product" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Region" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CustomerType" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Client" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="CAM" Nullable="true" />
+    <Property Type="String" Name="IP" Nullable="true" />
+    <Property Type="String" Name="Exchange_POP" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Branch_Code" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Secondary_IP" Nullable="true" />
+    <Property Type="String" Name="pocs" Nullable="true" />
+    <Property Type="String" Name="ProductStatus" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CircuitType" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="RunningTicketCountAgainstLink" Nullable="true" />
+    <Property Type="Int32" Name="LinkCount" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="ContactType">
+    <Key>
+      <PropertyRef Name="ContactTypeId" />
+    </Key>
+    <Property Name="ContactTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactType1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactNo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIp" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TicketMaster_Customer" FromRole="Customer" ToRole="TS_TicketMaster" />
+    <Property Name="AlternativeNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CityId" Type="Int32" />
+    <NavigationProperty Name="TS_Setup_City" Relationship="TicketSystemModel.FK_TS_Setup_City_Customer_City" FromRole="Customer" ToRole="TS_Setup_City" />
+  </EntityType>
+  <EntityType Name="MenuItem">
+    <Key>
+      <PropertyRef Name="Menu_Item_Code" />
+    </Key>
+    <Property Name="Menu_Item_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Menu_Item_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Menu_URL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Parent_Menu_Item_Code" Type="Int32" />
+    <Property Name="Created_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Active" Type="Boolean" />
+    <Property Name="Is_Displayed_In_Menu" Type="Boolean" />
+    <Property Name="User_Code" Type="Int32" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="User_IP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Company_Code" Type="Int32" />
+    <Property Name="SortOrder" Type="Int32" />
+    <Property Name="ApplicationID" Type="Int32" />
+    <NavigationProperty Name="RoleAccesses" Relationship="TicketSystemModel.FK__RoleAcces__Menu___3B75D760" FromRole="MenuItem" ToRole="RoleAccess" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Role_Code" />
+    </Key>
+    <Property Name="Role_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Role_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Created_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Active" Type="Boolean" />
+    <Property Name="User_Code" Type="Int32" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="User_IP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Company_Code" Type="Int32" />
+    <Property Name="TAT" Type="Int32" />
+    <Property Name="ApplicationId" Type="Int32" />
+    <NavigationProperty Name="Setup_Application" Relationship="TicketSystemModel.FK_Role_Setup_Application" FromRole="Role" ToRole="Setup_Application" />
+    <NavigationProperty Name="UserLogins" Relationship="TicketSystemModel.FK_UserLogin_Role" FromRole="Role" ToRole="UserLogin" />
+    <NavigationProperty Name="RoleStatusMappings" Relationship="TicketSystemModel.FK_RoleStatusMapping_Role" FromRole="Role" ToRole="RoleStatusMapping" />
+  </EntityType>
+  <EntityType Name="RoleAccess">
+    <Key>
+      <PropertyRef Name="Role_Access_Code" />
+    </Key>
+    <Property Name="Role_Access_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Role_Code" Type="Int32" />
+    <Property Name="Menu_Item_Code" Type="Int32" />
+    <Property Name="Has_Access" Type="Boolean" />
+    <Property Name="Created_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Active" Type="Boolean" />
+    <Property Name="User_Code" Type="Int32" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="User_IP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MenuItem" Relationship="TicketSystemModel.FK__RoleAcces__Menu___3B75D760" FromRole="RoleAccess" ToRole="MenuItem" />
+  </EntityType>
+  <EntityType Name="Setup_Application">
+    <Key>
+      <PropertyRef Name="ApplicationID" />
+    </Key>
+    <Property Name="ApplicationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplicationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="Int32" />
+    <NavigationProperty Name="Roles" Relationship="TicketSystemModel.FK_Role_Setup_Application" FromRole="Setup_Application" ToRole="Role" />
+    <NavigationProperty Name="UserLoginHistories" Relationship="TicketSystemModel.FK_Sec_UserLoginHistory_Setup_Application" FromRole="Setup_Application" ToRole="UserLoginHistory" />
+    <NavigationProperty Name="Setup_Application1" Relationship="TicketSystemModel.FK_Setup_Application_Setup_Application" FromRole="Setup_Application" ToRole="Setup_Application1" />
+    <NavigationProperty Name="Setup_Application2" Relationship="TicketSystemModel.FK_Setup_Application_Setup_Application" FromRole="Setup_Application1" ToRole="Setup_Application" />
+  </EntityType>
+  <EntityType Name="Setup_Color">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Color" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Setup_Department">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentPrefix" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsTeamAllowed" Type="Boolean" />
+    <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Setup_Employee" Relationship="TicketSystemModel.FK_Setup_Employee_Setup_Department" FromRole="Setup_Department" ToRole="Setup_Employee" />
+    <NavigationProperty Name="TS_TaskMaster" Relationship="TicketSystemModel.FK_TS_TaskMaster_Setup_Department" FromRole="Setup_Department" ToRole="TS_TaskMaster" />
+    <NavigationProperty Name="TS_TicketDetail" Relationship="TicketSystemModel.FK_TS_TicketDetail_Setup_Department" FromRole="Setup_Department" ToRole="TS_TicketDetail" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TicketMaster_Setup_Department" FromRole="Setup_Department" ToRole="TS_TicketMaster" />
+  </EntityType>
+  <EntityType Name="Setup_Designation">
+    <Key>
+      <PropertyRef Name="DesignationId" />
+    </Key>
+    <Property Name="DesignationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DesignationName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SiteId" Type="Int32" />
+    <NavigationProperty Name="Setup_Employee" Relationship="TicketSystemModel.FK_Setup_Employee_Setup_Designation" FromRole="Setup_Designation" ToRole="Setup_Employee" />
+  </EntityType>
+  <EntityType Name="Setup_Employee">
+    <Key>
+      <PropertyRef Name="Emp_Id" />
+    </Key>
+    <Property Name="Emp_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DesignationId" Type="Int32" />
+    <Property Name="DepartmentId" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Setup_Department" Relationship="TicketSystemModel.FK_Setup_Employee_Setup_Department" FromRole="Setup_Employee" ToRole="Setup_Department" />
+    <NavigationProperty Name="Setup_Designation" Relationship="TicketSystemModel.FK_Setup_Employee_Setup_Designation" FromRole="Setup_Employee" ToRole="Setup_Designation" />
+    <NavigationProperty Name="UserLogin" Relationship="TicketSystemModel.FK_Setup_Employee_UserLogin" FromRole="Setup_Employee" ToRole="UserLogin" />
+    <NavigationProperty Name="UserLogin1" Relationship="TicketSystemModel.FK_Setup_Employee_UserLogin1" FromRole="Setup_Employee" ToRole="UserLogin" />
+    <NavigationProperty Name="UserLogins" Relationship="TicketSystemModel.FK_UserLogin_Setup_Employee" FromRole="Setup_Employee" ToRole="UserLogin" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TS_ChatLog">
+    <Key>
+      <PropertyRef Name="ChatLogId" />
+    </Key>
+    <Property Name="ChatLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChatTypeId" Type="Int32" Nullable="false" />
+    <Property Name="TicketMasterId" Type="Int32" />
+    <Property Name="TaskMasterId" Type="Int32" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="AssigneeId" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Description_html" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsReply" Type="Boolean" Nullable="false" />
+    <Property Name="IsRead" Type="Boolean" />
+    <Property Name="FilePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedDateInt" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDateInt" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TS_Setup_ChatType" Relationship="TicketSystemModel.FK_Setup_ChatLog_TS_Setup_ChatType" FromRole="TS_ChatLog" ToRole="TS_Setup_ChatType" />
+    <NavigationProperty Name="TS_TaskMaster" Relationship="TicketSystemModel.FK_Setup_ChatLog_TS_TaskMaster" FromRole="TS_ChatLog" ToRole="TS_TaskMaster" />
+    <NavigationProperty Name="UserLogin" Relationship="TicketSystemModel.FK_TS_ChatLog_UserLogin" FromRole="TS_ChatLog" ToRole="UserLogin" />
+    <NavigationProperty Name="UserLogin1" Relationship="TicketSystemModel.FK_TS_ChatLog_UserLogin1" FromRole="TS_ChatLog" ToRole="UserLogin" />
+    <NavigationProperty Name="UserLogin2" Relationship="TicketSystemModel.FK_TS_ChatLog_UserLogin2" FromRole="TS_ChatLog" ToRole="UserLogin" />
+    <NavigationProperty Name="TS_ChatLogReadDetail" Relationship="TicketSystemModel.FK_TS_ChatLogReadDetail_TS_ChatLog" FromRole="TS_ChatLog" ToRole="TS_ChatLogReadDetail" />
+  </EntityType>
+  <EntityType Name="TS_MeetingAttachments">
+    <Key>
+      <PropertyRef Name="FileId" />
+    </Key>
+    <Property Name="FileId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TargetId" Type="Int32" />
+    <Property Name="Filename" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Filecomments" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Filetype" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="FileOriginalName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TS_Setup_ChatType">
+    <Key>
+      <PropertyRef Name="ChatTypeId" />
+    </Key>
+    <Property Name="ChatTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChatType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TS_ChatLog" Relationship="TicketSystemModel.FK_Setup_ChatLog_TS_Setup_ChatType" FromRole="TS_Setup_ChatType" ToRole="TS_ChatLog" />
+  </EntityType>
+  <EntityType Name="TS_Setup_Priority">
+    <Key>
+      <PropertyRef Name="PriorityId" />
+    </Key>
+    <Property Name="PriorityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PriorityName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsDefault" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TS_TaskMaster" Relationship="TicketSystemModel.FK_TS_TaskMaster_TS_Setup_Priority" FromRole="TS_Setup_Priority" ToRole="TS_TaskMaster" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_Priority" FromRole="TS_Setup_Priority" ToRole="TS_TicketMaster" />
+  </EntityType>
+  <EntityType Name="TS_Setup_RequestMode">
+    <Key>
+      <PropertyRef Name="RequestModeId" />
+    </Key>
+    <Property Name="RequestModeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestMode" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestMode" FromRole="TS_Setup_RequestMode" ToRole="TS_TicketMaster" />
+  </EntityType>
+  <EntityType Name="TS_Setup_RequestType">
+    <Key>
+      <PropertyRef Name="RequestTypeId" />
+    </Key>
+    <Property Name="RequestTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsDefault" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TS_Setup_RequestTypeCategory" Relationship="TicketSystemModel.FK_TS_Setup_RequestTypeCategory_TS_Setup_RequestType" FromRole="TS_Setup_RequestType" ToRole="TS_Setup_RequestTypeCategory" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestType" FromRole="TS_Setup_RequestType" ToRole="TS_TicketMaster" />
+  </EntityType>
+  <EntityType Name="TS_Setup_RequestTypeCategory">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RequestTypeId" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIp" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TS_Setup_RequestType" Relationship="TicketSystemModel.FK_TS_Setup_RequestTypeCategory_TS_Setup_RequestType" FromRole="TS_Setup_RequestTypeCategory" ToRole="TS_Setup_RequestType" />
+    <NavigationProperty Name="TS_Setup_RequestTypeSubcategory" Relationship="TicketSystemModel.FK_TS_Setup_RequestTypeSubcategory_TS_Setup_RequestTypeCategory" FromRole="TS_Setup_RequestTypeCategory" ToRole="TS_Setup_RequestTypeSubcategory" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestTypeCategory" FromRole="TS_Setup_RequestTypeCategory" ToRole="TS_TicketMaster" />
+  </EntityType>
+  <EntityType Name="TS_Setup_RequestTypeSubcategory">
+    <Key>
+      <PropertyRef Name="SubcategoryId" />
+    </Key>
+    <Property Name="SubcategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubcategoryName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ResolutionTime" Type="Int32" Nullable="false" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIp" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TS_Setup_RequestTypeCategory" Relationship="TicketSystemModel.FK_TS_Setup_RequestTypeSubcategory_TS_Setup_RequestTypeCategory" FromRole="TS_Setup_RequestTypeSubcategory" ToRole="TS_Setup_RequestTypeCategory" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestTypeSubcategory" FromRole="TS_Setup_RequestTypeSubcategory" ToRole="TS_TicketMaster" />
+  </EntityType>
+  <EntityType Name="TS_Setup_TicketLevel">
+    <Key>
+      <PropertyRef Name="LevelId" />
+    </Key>
+    <Property Name="LevelId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LevelName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Sort" Type="Int32" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_TicketLevel" FromRole="TS_Setup_TicketLevel" ToRole="TS_TicketMaster" />
+  </EntityType>
+  <EntityType Name="TS_Setup_TicketStatus">
+    <Key>
+      <PropertyRef Name="StatusId" />
+    </Key>
+    <Property Name="StatusId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsInitiator" Type="Boolean" Nullable="false" />
+    <Property Name="imageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="BackgroundColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TS_StatusDetail" Relationship="TicketSystemModel.FK_TS_StatusDetail_TS_Setup_TicketStatus" FromRole="TS_Setup_TicketStatus" ToRole="TS_StatusDetail" />
+    <NavigationProperty Name="TS_TaskDetail" Relationship="TicketSystemModel.FK_TS_TaskDetail_TS_Setup_TicketStatus" FromRole="TS_Setup_TicketStatus" ToRole="TS_TaskDetail" />
+    <NavigationProperty Name="TS_TaskLog" Relationship="TicketSystemModel.FK_TS_TaskLog_TS_Setup_TicketStatus" FromRole="TS_Setup_TicketStatus" ToRole="TS_TaskLog" />
+    <NavigationProperty Name="TS_TaskMaster" Relationship="TicketSystemModel.FK_TS_TaskMaster_TS_Setup_TicketStatus" FromRole="TS_Setup_TicketStatus" ToRole="TS_TaskMaster" />
+    <NavigationProperty Name="RoleStatusMappings" Relationship="TicketSystemModel.FK_RoleStatusMapping_TS_Setup_TicketStatus" FromRole="TS_Setup_TicketStatus" ToRole="RoleStatusMapping" />
+    <NavigationProperty Name="TS_TicketDetail" Relationship="TicketSystemModel.FK_TS_TicketDetail_TS_Setup_TicketStatus" FromRole="TS_Setup_TicketStatus" ToRole="TS_TicketDetail" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_TicketStatus" FromRole="TS_Setup_TicketStatus" ToRole="TS_TicketMaster" />
+  </EntityType>
+  <EntityType Name="TS_Setup_TicketType">
+    <Key>
+      <PropertyRef Name="TicketTypeId" />
+    </Key>
+    <Property Name="TicketTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_TicketType" FromRole="TS_Setup_TicketType" ToRole="TS_TicketMaster" />
+  </EntityType>
+  <EntityType Name="TS_StatusDetail">
+    <Key>
+      <PropertyRef Name="StatusDetailId" />
+    </Key>
+    <Property Name="StatusDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="ChildId" Type="Int32" />
+    <Property Name="IsInitiator" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="TS_Setup_TicketStatus" Relationship="TicketSystemModel.FK_TS_StatusDetail_TS_Setup_TicketStatus" FromRole="TS_StatusDetail" ToRole="TS_Setup_TicketStatus" />
+  </EntityType>
+  <EntityType Name="TS_TaskAttachments">
+    <Key>
+      <PropertyRef Name="FileId" />
+    </Key>
+    <Property Name="FileId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TargetId" Type="Int32" />
+    <Property Name="Filename" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Filecomments" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Filetype" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="FileOriginalName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TS_TaskDetail">
+    <Key>
+      <PropertyRef Name="TaskDetailId" />
+    </Key>
+    <Property Name="TaskDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TaskMasterId" Type="Int32" Nullable="false" />
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <Property Name="AssigneeTo" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TS_Setup_TicketStatus" Relationship="TicketSystemModel.FK_TS_TaskDetail_TS_Setup_TicketStatus" FromRole="TS_TaskDetail" ToRole="TS_Setup_TicketStatus" />
+    <NavigationProperty Name="TS_TaskMaster" Relationship="TicketSystemModel.FK_TS_TaskDetail_TS_TaskMaster" FromRole="TS_TaskDetail" ToRole="TS_TaskMaster" />
+    <NavigationProperty Name="UserLogin" Relationship="TicketSystemModel.FK_TS_TaskDetail_UserLogin" FromRole="TS_TaskDetail" ToRole="UserLogin" />
+    <NavigationProperty Name="UserLogin1" Relationship="TicketSystemModel.FK_TS_TaskDetail_UserLogin1" FromRole="TS_TaskDetail" ToRole="UserLogin" />
+    <NavigationProperty Name="TS_TaskLog" Relationship="TicketSystemModel.FK_TS_TaskLog_TS_TaskDetail1" FromRole="TS_TaskDetail" ToRole="TS_TaskLog" />
+  </EntityType>
+  <EntityType Name="TS_TaskLog">
+    <Key>
+      <PropertyRef Name="TaskLogId" />
+    </Key>
+    <Property Name="TaskLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TaskMasterId" Type="Int32" Nullable="false" />
+    <Property Name="TaskDetailId" Type="Int32" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="AssigneeId" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsReply" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDateInt" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDateInt" Type="Int32" />
+    <Property Name="IsRead" Type="Boolean" />
+    <NavigationProperty Name="TS_Setup_TicketStatus" Relationship="TicketSystemModel.FK_TS_TaskLog_TS_Setup_TicketStatus" FromRole="TS_TaskLog" ToRole="TS_Setup_TicketStatus" />
+    <NavigationProperty Name="TS_TaskDetail" Relationship="TicketSystemModel.FK_TS_TaskLog_TS_TaskDetail1" FromRole="TS_TaskLog" ToRole="TS_TaskDetail" />
+    <NavigationProperty Name="TS_TaskMaster" Relationship="TicketSystemModel.FK_TS_TaskLog_TS_TaskDetail" FromRole="TS_TaskLog" ToRole="TS_TaskMaster" />
+    <NavigationProperty Name="TS_TaskMaster1" Relationship="TicketSystemModel.FK_TS_TaskLog_TS_TaskMaster" FromRole="TS_TaskLog" ToRole="TS_TaskMaster" />
+    <NavigationProperty Name="UserLogin" Relationship="TicketSystemModel.FK_TS_TaskLog_UserLogin" FromRole="TS_TaskLog" ToRole="UserLogin" />
+  </EntityType>
+  <EntityType Name="TS_TaskMaster">
+    <Key>
+      <PropertyRef Name="TaskMasterId" />
+    </Key>
+    <Property Name="TaskMasterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketMasterId" Type="Int32" />
+    <Property Name="TaskTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="InitiatorId" Type="Int32" />
+    <Property Name="AssigneeId" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="PriorityId" Type="Int32" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="DepartmentId" Type="Int32" />
+    <NavigationProperty Name="Setup_Department" Relationship="TicketSystemModel.FK_TS_TaskMaster_Setup_Department" FromRole="TS_TaskMaster" ToRole="Setup_Department" />
+    <NavigationProperty Name="TS_ChatLog" Relationship="TicketSystemModel.FK_Setup_ChatLog_TS_TaskMaster" FromRole="TS_TaskMaster" ToRole="TS_ChatLog" />
+    <NavigationProperty Name="TS_Setup_Priority" Relationship="TicketSystemModel.FK_TS_TaskMaster_TS_Setup_Priority" FromRole="TS_TaskMaster" ToRole="TS_Setup_Priority" />
+    <NavigationProperty Name="TS_Setup_TicketStatus" Relationship="TicketSystemModel.FK_TS_TaskMaster_TS_Setup_TicketStatus" FromRole="TS_TaskMaster" ToRole="TS_Setup_TicketStatus" />
+    <NavigationProperty Name="TS_TaskDetail" Relationship="TicketSystemModel.FK_TS_TaskDetail_TS_TaskMaster" FromRole="TS_TaskMaster" ToRole="TS_TaskDetail" />
+    <NavigationProperty Name="TS_TaskLog" Relationship="TicketSystemModel.FK_TS_TaskLog_TS_TaskDetail" FromRole="TS_TaskMaster" ToRole="TS_TaskLog" />
+    <NavigationProperty Name="TS_TaskLog1" Relationship="TicketSystemModel.FK_TS_TaskLog_TS_TaskMaster" FromRole="TS_TaskMaster" ToRole="TS_TaskLog" />
+    <NavigationProperty Name="UserLogin" Relationship="TicketSystemModel.FK_TS_TaskMaster_UserLogin" FromRole="TS_TaskMaster" ToRole="UserLogin" />
+    <NavigationProperty Name="UserLogin1" Relationship="TicketSystemModel.FK_TS_TaskMaster_UserLogin1" FromRole="TS_TaskMaster" ToRole="UserLogin" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TaskMaster_TS_TicketMaster" FromRole="TS_TaskMaster" ToRole="TS_TicketMaster" />
+  </EntityType>
+  <EntityType Name="TS_TicketAttachments">
+    <Key>
+      <PropertyRef Name="FileId" />
+    </Key>
+    <Property Name="FileId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TargetId" Type="Int32" />
+    <Property Name="Filename" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Filecomments" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Filetype" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="FileOriginalName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TS_TicketCC">
+    <Key>
+      <PropertyRef Name="TicketToId" />
+    </Key>
+    <Property Name="TicketToId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketMasterId" Type="Int32" Nullable="false" />
+    <Property Name="AssigneeId" Type="Int32" />
+    <Property Name="EmailId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="UserLogin" Relationship="TicketSystemModel.FK_TS_TicketCC_UserLogin" FromRole="TS_TicketCC" ToRole="UserLogin" />
+  </EntityType>
+  <EntityType Name="TS_TicketComment">
+    <Key>
+      <PropertyRef Name="TicketCommentId" />
+    </Key>
+    <Property Name="TicketCommentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketMasterId" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDateInt" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDateInt" Type="Int32" />
+    <NavigationProperty Name="UserLogin" Relationship="TicketSystemModel.FK_TS_TicketComment_UserLogin" FromRole="TS_TicketComment" ToRole="UserLogin" />
+    <NavigationProperty Name="UserLogin1" Relationship="TicketSystemModel.FK_TS_TicketComment_UserLogin1" FromRole="TS_TicketComment" ToRole="UserLogin" />
+  </EntityType>
+  <EntityType Name="TS_TicketMeeting">
+    <Key>
+      <PropertyRef Name="TicketMeetingId" />
+    </Key>
+    <Property Name="TicketMeetingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketMasterId" Type="Int32" />
+    <Property Name="MeetingStartTime" Type="Time" Precision="7" />
+    <Property Name="MeetingEndTime" Type="Time" Precision="7" />
+    <Property Name="MeetingDate" Type="DateTime" Precision="0" />
+    <Property Name="MeetingAgenda" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MeetingDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDateInt" Type="Int32" />
+    <NavigationProperty Name="TS_TicketMeetingDetail" Relationship="TicketSystemModel.FK_TS_TicketMeetingDetail_TS_TicketMeeting" FromRole="TS_TicketMeeting" ToRole="TS_TicketMeetingDetail" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TicketMeeting_TS_TicketMaster" FromRole="TS_TicketMeeting" ToRole="TS_TicketMaster" />
+  </EntityType>
+  <EntityType Name="TS_TicketMeetingDetail">
+    <Key>
+      <PropertyRef Name="TicketMeetingDetail" />
+    </Key>
+    <Property Name="TicketMeetingDetail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketMeetingId" Type="Int32" Nullable="false" />
+    <Property Name="AttendeeId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsRead" Type="Boolean" />
+    <NavigationProperty Name="TS_TicketMeeting" Relationship="TicketSystemModel.FK_TS_TicketMeetingDetail_TS_TicketMeeting" FromRole="TS_TicketMeetingDetail" ToRole="TS_TicketMeeting" />
+    <NavigationProperty Name="UserLogin" Relationship="TicketSystemModel.FK_TS_TicketMeetingDetail_UserLogin" FromRole="TS_TicketMeetingDetail" ToRole="UserLogin" />
+  </EntityType>
+  <EntityType Name="TS_TicketTo">
+    <Key>
+      <PropertyRef Name="TicketToId" />
+    </Key>
+    <Property Name="TicketToId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketMasterId" Type="Int32" Nullable="false" />
+    <Property Name="EmailId" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="User_Code" />
+    </Key>
+    <Property Name="User_Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_Id" Type="Int32" />
+    <Property Name="Full_Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Login_ID" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Role_Code" Type="Int32" Nullable="false" />
+    <Property Name="IsEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Modified_By" Type="Int32" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="User_IP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Role" Relationship="TicketSystemModel.FK_UserLogin_Role" FromRole="UserLogin" ToRole="Role" />
+    <NavigationProperty Name="Setup_Employee" Relationship="TicketSystemModel.FK_Setup_Employee_UserLogin" FromRole="UserLogin" ToRole="Setup_Employee" />
+    <NavigationProperty Name="Setup_Employee1" Relationship="TicketSystemModel.FK_Setup_Employee_UserLogin1" FromRole="UserLogin" ToRole="Setup_Employee" />
+    <NavigationProperty Name="Setup_Employee2" Relationship="TicketSystemModel.FK_UserLogin_Setup_Employee" FromRole="UserLogin" ToRole="Setup_Employee" />
+    <NavigationProperty Name="TS_ChatLog" Relationship="TicketSystemModel.FK_TS_ChatLog_UserLogin" FromRole="UserLogin" ToRole="TS_ChatLog" />
+    <NavigationProperty Name="TS_ChatLog1" Relationship="TicketSystemModel.FK_TS_ChatLog_UserLogin1" FromRole="UserLogin" ToRole="TS_ChatLog" />
+    <NavigationProperty Name="TS_ChatLog2" Relationship="TicketSystemModel.FK_TS_ChatLog_UserLogin2" FromRole="UserLogin" ToRole="TS_ChatLog" />
+    <NavigationProperty Name="TS_TaskDetail" Relationship="TicketSystemModel.FK_TS_TaskDetail_UserLogin" FromRole="UserLogin" ToRole="TS_TaskDetail" />
+    <NavigationProperty Name="TS_TaskDetail1" Relationship="TicketSystemModel.FK_TS_TaskDetail_UserLogin1" FromRole="UserLogin" ToRole="TS_TaskDetail" />
+    <NavigationProperty Name="TS_TaskLog" Relationship="TicketSystemModel.FK_TS_TaskLog_UserLogin" FromRole="UserLogin" ToRole="TS_TaskLog" />
+    <NavigationProperty Name="TS_TaskMaster" Relationship="TicketSystemModel.FK_TS_TaskMaster_UserLogin" FromRole="UserLogin" ToRole="TS_TaskMaster" />
+    <NavigationProperty Name="TS_TaskMaster1" Relationship="TicketSystemModel.FK_TS_TaskMaster_UserLogin1" FromRole="UserLogin" ToRole="TS_TaskMaster" />
+    <NavigationProperty Name="TS_TicketCC" Relationship="TicketSystemModel.FK_TS_TicketCC_UserLogin" FromRole="UserLogin" ToRole="TS_TicketCC" />
+    <NavigationProperty Name="TS_TicketComment" Relationship="TicketSystemModel.FK_TS_TicketComment_UserLogin" FromRole="UserLogin" ToRole="TS_TicketComment" />
+    <NavigationProperty Name="TS_TicketComment1" Relationship="TicketSystemModel.FK_TS_TicketComment_UserLogin1" FromRole="UserLogin" ToRole="TS_TicketComment" />
+    <NavigationProperty Name="TS_TicketMeetingDetail" Relationship="TicketSystemModel.FK_TS_TicketMeetingDetail_UserLogin" FromRole="UserLogin" ToRole="TS_TicketMeetingDetail" />
+    <NavigationProperty Name="UserLoginHistories" Relationship="TicketSystemModel.FK_Sec_UserLoginHistory_UserLogin" FromRole="UserLogin" ToRole="UserLoginHistory" />
+    <NavigationProperty Name="TS_ChatLogReadDetail" Relationship="TicketSystemModel.FK_TS_ChatLogReadDetail_UserLogin" FromRole="UserLogin" ToRole="TS_ChatLogReadDetail" />
+    <NavigationProperty Name="TS_TicketDetail" Relationship="TicketSystemModel.FK_TS_TicketDetail_UserLogin" FromRole="UserLogin" ToRole="TS_TicketDetail" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TicketMaster_UserLogin" FromRole="UserLogin" ToRole="TS_TicketMaster" />
+    <NavigationProperty Name="TS_TicketMaster1" Relationship="TicketSystemModel.FK_TS_TicketMaster_UserLogin1" FromRole="UserLogin" ToRole="TS_TicketMaster" />
+  </EntityType>
+  <EntityType Name="UserLoginHistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="ApplicationId" Type="Int32" />
+    <Property Name="IsSuccess" Type="Boolean" />
+    <Property Name="UserIP" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Setup_Application" Relationship="TicketSystemModel.FK_Sec_UserLoginHistory_Setup_Application" FromRole="UserLoginHistory" ToRole="Setup_Application" />
+    <NavigationProperty Name="UserLogin" Relationship="TicketSystemModel.FK_Sec_UserLoginHistory_UserLogin" FromRole="UserLoginHistory" ToRole="UserLogin" />
+  </EntityType>
+  <Association Name="FK__RoleAcces__Menu___3B75D760">
+    <End Type="TicketSystemModel.MenuItem" Role="MenuItem" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.RoleAccess" Role="RoleAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MenuItem">
+        <PropertyRef Name="Menu_Item_Code" />
+      </Principal>
+      <Dependent Role="RoleAccess">
+        <PropertyRef Name="Menu_Item_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Role_Setup_Application">
+    <End Type="TicketSystemModel.Setup_Application" Role="Setup_Application" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.Role" Role="Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setup_Application">
+        <PropertyRef Name="ApplicationID" />
+      </Principal>
+      <Dependent Role="Role">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLogin_Role">
+    <End Type="TicketSystemModel.Role" Role="Role" Multiplicity="1" />
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Role_Code" />
+      </Principal>
+      <Dependent Role="UserLogin">
+        <PropertyRef Name="Role_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sec_UserLoginHistory_Setup_Application">
+    <End Type="TicketSystemModel.Setup_Application" Role="Setup_Application" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.UserLoginHistory" Role="UserLoginHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setup_Application">
+        <PropertyRef Name="ApplicationID" />
+      </Principal>
+      <Dependent Role="UserLoginHistory">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Setup_Application_Setup_Application">
+    <End Type="TicketSystemModel.Setup_Application" Role="Setup_Application" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.Setup_Application" Role="Setup_Application1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setup_Application">
+        <PropertyRef Name="ApplicationID" />
+      </Principal>
+      <Dependent Role="Setup_Application1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Setup_Employee_Setup_Department">
+    <End Type="TicketSystemModel.Setup_Department" Role="Setup_Department" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.Setup_Employee" Role="Setup_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setup_Department">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="Setup_Employee">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskMaster_Setup_Department">
+    <End Type="TicketSystemModel.Setup_Department" Role="Setup_Department" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TaskMaster" Role="TS_TaskMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setup_Department">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="TS_TaskMaster">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Setup_Employee_Setup_Designation">
+    <End Type="TicketSystemModel.Setup_Designation" Role="Setup_Designation" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.Setup_Employee" Role="Setup_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setup_Designation">
+        <PropertyRef Name="DesignationId" />
+      </Principal>
+      <Dependent Role="Setup_Employee">
+        <PropertyRef Name="DesignationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Setup_Employee_UserLogin">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="1" />
+    <End Type="TicketSystemModel.Setup_Employee" Role="Setup_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="Setup_Employee">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Setup_Employee_UserLogin1">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.Setup_Employee" Role="Setup_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="Setup_Employee">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLogin_Setup_Employee">
+    <End Type="TicketSystemModel.Setup_Employee" Role="Setup_Employee" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setup_Employee">
+        <PropertyRef Name="Emp_Id" />
+      </Principal>
+      <Dependent Role="UserLogin">
+        <PropertyRef Name="Emp_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Setup_ChatLog_TS_Setup_ChatType">
+    <End Type="TicketSystemModel.TS_Setup_ChatType" Role="TS_Setup_ChatType" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_ChatLog" Role="TS_ChatLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_ChatType">
+        <PropertyRef Name="ChatTypeId" />
+      </Principal>
+      <Dependent Role="TS_ChatLog">
+        <PropertyRef Name="ChatTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Setup_ChatLog_TS_TaskMaster">
+    <End Type="TicketSystemModel.TS_TaskMaster" Role="TS_TaskMaster" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_ChatLog" Role="TS_ChatLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_TaskMaster">
+        <PropertyRef Name="TaskMasterId" />
+      </Principal>
+      <Dependent Role="TS_ChatLog">
+        <PropertyRef Name="TaskMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_ChatLog_UserLogin">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_ChatLog" Role="TS_ChatLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_ChatLog">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_ChatLog_UserLogin1">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_ChatLog" Role="TS_ChatLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_ChatLog">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_ChatLog_UserLogin2">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_ChatLog" Role="TS_ChatLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_ChatLog">
+        <PropertyRef Name="AssigneeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskMaster_TS_Setup_Priority">
+    <End Type="TicketSystemModel.TS_Setup_Priority" Role="TS_Setup_Priority" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TaskMaster" Role="TS_TaskMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_Priority">
+        <PropertyRef Name="PriorityId" />
+      </Principal>
+      <Dependent Role="TS_TaskMaster">
+        <PropertyRef Name="PriorityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_Setup_RequestTypeCategory_TS_Setup_RequestType">
+    <End Type="TicketSystemModel.TS_Setup_RequestType" Role="TS_Setup_RequestType" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_Setup_RequestTypeCategory" Role="TS_Setup_RequestTypeCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_RequestType">
+        <PropertyRef Name="RequestTypeId" />
+      </Principal>
+      <Dependent Role="TS_Setup_RequestTypeCategory">
+        <PropertyRef Name="RequestTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_Setup_RequestTypeSubcategory_TS_Setup_RequestTypeCategory">
+    <End Type="TicketSystemModel.TS_Setup_RequestTypeCategory" Role="TS_Setup_RequestTypeCategory" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_Setup_RequestTypeSubcategory" Role="TS_Setup_RequestTypeSubcategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_RequestTypeCategory">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="TS_Setup_RequestTypeSubcategory">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_StatusDetail_TS_Setup_TicketStatus">
+    <End Type="TicketSystemModel.TS_Setup_TicketStatus" Role="TS_Setup_TicketStatus" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_StatusDetail" Role="TS_StatusDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_TicketStatus">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="TS_StatusDetail">
+        <PropertyRef Name="ChildId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskDetail_TS_Setup_TicketStatus">
+    <End Type="TicketSystemModel.TS_Setup_TicketStatus" Role="TS_Setup_TicketStatus" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TaskDetail" Role="TS_TaskDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_TicketStatus">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="TS_TaskDetail">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskLog_TS_Setup_TicketStatus">
+    <End Type="TicketSystemModel.TS_Setup_TicketStatus" Role="TS_Setup_TicketStatus" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TaskLog" Role="TS_TaskLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_TicketStatus">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="TS_TaskLog">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskMaster_TS_Setup_TicketStatus">
+    <End Type="TicketSystemModel.TS_Setup_TicketStatus" Role="TS_Setup_TicketStatus" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TaskMaster" Role="TS_TaskMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_TicketStatus">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="TS_TaskMaster">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskDetail_TS_TaskMaster">
+    <End Type="TicketSystemModel.TS_TaskMaster" Role="TS_TaskMaster" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TaskDetail" Role="TS_TaskDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_TaskMaster">
+        <PropertyRef Name="TaskMasterId" />
+      </Principal>
+      <Dependent Role="TS_TaskDetail">
+        <PropertyRef Name="TaskMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskDetail_UserLogin">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TaskDetail" Role="TS_TaskDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_TaskDetail">
+        <PropertyRef Name="AssigneeTo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskDetail_UserLogin1">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TaskDetail" Role="TS_TaskDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_TaskDetail">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskLog_TS_TaskDetail1">
+    <End Type="TicketSystemModel.TS_TaskDetail" Role="TS_TaskDetail" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TaskLog" Role="TS_TaskLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_TaskDetail">
+        <PropertyRef Name="TaskDetailId" />
+      </Principal>
+      <Dependent Role="TS_TaskLog">
+        <PropertyRef Name="TaskDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskLog_TS_TaskDetail">
+    <End Type="TicketSystemModel.TS_TaskMaster" Role="TS_TaskMaster" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TaskLog" Role="TS_TaskLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_TaskMaster">
+        <PropertyRef Name="TaskMasterId" />
+      </Principal>
+      <Dependent Role="TS_TaskLog">
+        <PropertyRef Name="TaskMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskLog_TS_TaskMaster">
+    <End Type="TicketSystemModel.TS_TaskMaster" Role="TS_TaskMaster" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TaskLog" Role="TS_TaskLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_TaskMaster">
+        <PropertyRef Name="TaskMasterId" />
+      </Principal>
+      <Dependent Role="TS_TaskLog">
+        <PropertyRef Name="TaskMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskLog_UserLogin">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TaskLog" Role="TS_TaskLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_TaskLog">
+        <PropertyRef Name="AssigneeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskMaster_UserLogin">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TaskMaster" Role="TS_TaskMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_TaskMaster">
+        <PropertyRef Name="AssigneeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskMaster_UserLogin1">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TaskMaster" Role="TS_TaskMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_TaskMaster">
+        <PropertyRef Name="InitiatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketCC_UserLogin">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TicketCC" Role="TS_TicketCC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_TicketCC">
+        <PropertyRef Name="AssigneeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketComment_UserLogin">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TicketComment" Role="TS_TicketComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_TicketComment">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketComment_UserLogin1">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TicketComment" Role="TS_TicketComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_TicketComment">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMeetingDetail_TS_TicketMeeting">
+    <End Type="TicketSystemModel.TS_TicketMeeting" Role="TS_TicketMeeting" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TicketMeetingDetail" Role="TS_TicketMeetingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_TicketMeeting">
+        <PropertyRef Name="TicketMeetingId" />
+      </Principal>
+      <Dependent Role="TS_TicketMeetingDetail">
+        <PropertyRef Name="TicketMeetingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMeetingDetail_UserLogin">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TicketMeetingDetail" Role="TS_TicketMeetingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_TicketMeetingDetail">
+        <PropertyRef Name="AttendeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sec_UserLoginHistory_UserLogin">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="1" />
+    <End Type="TicketSystemModel.UserLoginHistory" Role="UserLoginHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="UserLoginHistory">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TS_ChatLogReadDetail">
+    <Key>
+      <PropertyRef Name="ChatLogReadDetailId" />
+    </Key>
+    <Property Name="ChatLogReadDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChatLogId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TS_ChatLog" Relationship="TicketSystemModel.FK_TS_ChatLogReadDetail_TS_ChatLog" FromRole="TS_ChatLogReadDetail" ToRole="TS_ChatLog" />
+    <NavigationProperty Name="UserLogin" Relationship="TicketSystemModel.FK_TS_ChatLogReadDetail_UserLogin" FromRole="TS_ChatLogReadDetail" ToRole="UserLogin" />
+  </EntityType>
+  <Association Name="FK_TS_ChatLogReadDetail_TS_ChatLog">
+    <End Type="TicketSystemModel.TS_ChatLog" Role="TS_ChatLog" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_ChatLogReadDetail" Role="TS_ChatLogReadDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_ChatLog">
+        <PropertyRef Name="ChatLogId" />
+      </Principal>
+      <Dependent Role="TS_ChatLogReadDetail">
+        <PropertyRef Name="ChatLogId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_ChatLogReadDetail_UserLogin">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_ChatLogReadDetail" Role="TS_ChatLogReadDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_ChatLogReadDetail">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="Dashboard_PriorityWiseTicketsCount_Result1">
+    <Property Type="String" Name="Label" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Count" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="RoleStatusMapping">
+    <Key>
+      <PropertyRef Name="Status_Mapping_Id" />
+    </Key>
+    <Property Name="Status_Mapping_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Role_Code" Type="Int32" Nullable="false" />
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Role" Relationship="TicketSystemModel.FK_RoleStatusMapping_Role" FromRole="RoleStatusMapping" ToRole="Role" />
+    <NavigationProperty Name="TS_Setup_TicketStatus" Relationship="TicketSystemModel.FK_RoleStatusMapping_TS_Setup_TicketStatus" FromRole="RoleStatusMapping" ToRole="TS_Setup_TicketStatus" />
+  </EntityType>
+  <Association Name="FK_RoleStatusMapping_Role">
+    <End Type="TicketSystemModel.Role" Role="Role" Multiplicity="1" />
+    <End Type="TicketSystemModel.RoleStatusMapping" Role="RoleStatusMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Role_Code" />
+      </Principal>
+      <Dependent Role="RoleStatusMapping">
+        <PropertyRef Name="Role_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleStatusMapping_TS_Setup_TicketStatus">
+    <End Type="TicketSystemModel.TS_Setup_TicketStatus" Role="TS_Setup_TicketStatus" Multiplicity="1" />
+    <End Type="TicketSystemModel.RoleStatusMapping" Role="RoleStatusMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_TicketStatus">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="RoleStatusMapping">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TS_Setup_TypeOfIssue">
+    <Key>
+      <PropertyRef Name="TypeOfIssueId" />
+    </Key>
+    <Property Name="TypeOfIssueId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeOfIssue" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TS_Setup_ProductSubCategory" Relationship="TicketSystemModel.FK_TS_Setup_ProductSubCategory_TS_Setup_TypeOfIssue" FromRole="TS_Setup_TypeOfIssue" ToRole="TS_Setup_ProductSubCategory" />
+  </EntityType>
+  <EntityType Name="TS_TicketDetail">
+    <Key>
+      <PropertyRef Name="TicketDetailId" />
+    </Key>
+    <Property Name="TicketDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketMasterId" Type="Int32" Nullable="false" />
+    <Property Name="AssigneeId" Type="Int32" />
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description_html" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDateInt" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDateInt" Type="Int32" />
+    <Property Name="EmailFrom" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="FaultId" Type="Int32" />
+    <Property Name="CorrectiveActionId" Type="Int32" />
+    <Property Name="TypeOfIssueId" Type="Int32" />
+    <NavigationProperty Name="Setup_Department" Relationship="TicketSystemModel.FK_TS_TicketDetail_Setup_Department" FromRole="TS_TicketDetail" ToRole="Setup_Department" />
+    <NavigationProperty Name="TS_Setup_TicketStatus" Relationship="TicketSystemModel.FK_TS_TicketDetail_TS_Setup_TicketStatus" FromRole="TS_TicketDetail" ToRole="TS_Setup_TicketStatus" />
+    <NavigationProperty Name="TS_TicketMaster" Relationship="TicketSystemModel.FK_TS_TicketDetail_TS_TicketMaster" FromRole="TS_TicketDetail" ToRole="TS_TicketMaster" />
+    <NavigationProperty Name="UserLogin" Relationship="TicketSystemModel.FK_TS_TicketDetail_UserLogin" FromRole="TS_TicketDetail" ToRole="UserLogin" />
+    <Property Name="TypeOfComplaintId" Type="Int32" />
+    <Property Name="ProductSubCategoryId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TS_TicketMaster">
+    <Key>
+      <PropertyRef Name="TicketMasterId" />
+    </Key>
+    <Property Name="TicketMasterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ParentTicketMasterId" Type="Int32" />
+    <Property Name="InitiatorId" Type="Int32" />
+    <Property Name="AssigneeId" Type="Int32" />
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" />
+    <Property Name="PriorityId" Type="Int32" Nullable="false" />
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <Property Name="RequestModeId" Type="Int32" Nullable="false" />
+    <Property Name="RequestTypeId" Type="Int32" Nullable="false" />
+    <Property Name="IsAssigned" Type="Boolean" />
+    <Property Name="Tittle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Description_html" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TicketCreationDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TicketCreationDateInt" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedDateInt" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="TicketCreationTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDateInt" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="LevelId" Type="Int32" />
+    <Property Name="TicketTypeId" Type="Int32" Nullable="false" />
+    <Property Name="IsFlagMark" Type="Boolean" />
+    <Property Name="RequestTypeCategoryId" Type="Int32" />
+    <Property Name="RequestTypeSubCategoryId" Type="Int32" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="TypeOfIssueId" Type="Int32" />
+    <NavigationProperty Name="Customer" Relationship="TicketSystemModel.FK_TS_TicketMaster_Customer" FromRole="TS_TicketMaster" ToRole="Customer" />
+    <NavigationProperty Name="Setup_Department" Relationship="TicketSystemModel.FK_TS_TicketMaster_Setup_Department" FromRole="TS_TicketMaster" ToRole="Setup_Department" />
+    <NavigationProperty Name="TS_Setup_Priority" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_Priority" FromRole="TS_TicketMaster" ToRole="TS_Setup_Priority" />
+    <NavigationProperty Name="TS_Setup_RequestMode" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestMode" FromRole="TS_TicketMaster" ToRole="TS_Setup_RequestMode" />
+    <NavigationProperty Name="TS_Setup_RequestType" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestType" FromRole="TS_TicketMaster" ToRole="TS_Setup_RequestType" />
+    <NavigationProperty Name="TS_Setup_RequestTypeCategory" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestTypeCategory" FromRole="TS_TicketMaster" ToRole="TS_Setup_RequestTypeCategory" />
+    <NavigationProperty Name="TS_Setup_RequestTypeSubcategory" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_RequestTypeSubcategory" FromRole="TS_TicketMaster" ToRole="TS_Setup_RequestTypeSubcategory" />
+    <NavigationProperty Name="TS_Setup_TicketLevel" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_TicketLevel" FromRole="TS_TicketMaster" ToRole="TS_Setup_TicketLevel" />
+    <NavigationProperty Name="TS_Setup_TicketStatus" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_TicketStatus" FromRole="TS_TicketMaster" ToRole="TS_Setup_TicketStatus" />
+    <NavigationProperty Name="TS_Setup_TicketType" Relationship="TicketSystemModel.FK_TS_TicketMaster_TS_Setup_TicketType" FromRole="TS_TicketMaster" ToRole="TS_Setup_TicketType" />
+    <NavigationProperty Name="TS_TaskMaster" Relationship="TicketSystemModel.FK_TS_TaskMaster_TS_TicketMaster" FromRole="TS_TicketMaster" ToRole="TS_TaskMaster" />
+    <NavigationProperty Name="TS_TicketDetail" Relationship="TicketSystemModel.FK_TS_TicketDetail_TS_TicketMaster" FromRole="TS_TicketMaster" ToRole="TS_TicketDetail" />
+    <NavigationProperty Name="UserLogin" Relationship="TicketSystemModel.FK_TS_TicketMaster_UserLogin" FromRole="TS_TicketMaster" ToRole="UserLogin" />
+    <NavigationProperty Name="UserLogin1" Relationship="TicketSystemModel.FK_TS_TicketMaster_UserLogin1" FromRole="TS_TicketMaster" ToRole="UserLogin" />
+    <NavigationProperty Name="TS_TicketMeeting" Relationship="TicketSystemModel.FK_TS_TicketMeeting_TS_TicketMaster" FromRole="TS_TicketMaster" ToRole="TS_TicketMeeting" />
+    <Property Name="TypeOfComplaintId" Type="Int32" />
+    <Property Name="ProductSubCategoryId" Type="Int32" />
+    <Property Name="Ticket_Reopen_DateInt" Type="Int32" />
+    <Property Name="Ticket_Reopen_Date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_TS_TicketMaster_Customer">
+    <End Type="TicketSystemModel.Customer" Role="Customer" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="TS_TicketMaster">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketDetail_Setup_Department">
+    <End Type="TicketSystemModel.Setup_Department" Role="Setup_Department" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TicketDetail" Role="TS_TicketDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setup_Department">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="TS_TicketDetail">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMaster_Setup_Department">
+    <End Type="TicketSystemModel.Setup_Department" Role="Setup_Department" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setup_Department">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="TS_TicketMaster">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMaster_TS_Setup_Priority">
+    <End Type="TicketSystemModel.TS_Setup_Priority" Role="TS_Setup_Priority" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_Priority">
+        <PropertyRef Name="PriorityId" />
+      </Principal>
+      <Dependent Role="TS_TicketMaster">
+        <PropertyRef Name="PriorityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMaster_TS_Setup_RequestMode">
+    <End Type="TicketSystemModel.TS_Setup_RequestMode" Role="TS_Setup_RequestMode" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_RequestMode">
+        <PropertyRef Name="RequestModeId" />
+      </Principal>
+      <Dependent Role="TS_TicketMaster">
+        <PropertyRef Name="RequestModeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMaster_TS_Setup_RequestType">
+    <End Type="TicketSystemModel.TS_Setup_RequestType" Role="TS_Setup_RequestType" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_RequestType">
+        <PropertyRef Name="RequestTypeId" />
+      </Principal>
+      <Dependent Role="TS_TicketMaster">
+        <PropertyRef Name="RequestTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMaster_TS_Setup_RequestTypeCategory">
+    <End Type="TicketSystemModel.TS_Setup_RequestTypeCategory" Role="TS_Setup_RequestTypeCategory" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_RequestTypeCategory">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="TS_TicketMaster">
+        <PropertyRef Name="RequestTypeCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMaster_TS_Setup_RequestTypeSubcategory">
+    <End Type="TicketSystemModel.TS_Setup_RequestTypeSubcategory" Role="TS_Setup_RequestTypeSubcategory" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_RequestTypeSubcategory">
+        <PropertyRef Name="SubcategoryId" />
+      </Principal>
+      <Dependent Role="TS_TicketMaster">
+        <PropertyRef Name="RequestTypeSubCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMaster_TS_Setup_TicketLevel">
+    <End Type="TicketSystemModel.TS_Setup_TicketLevel" Role="TS_Setup_TicketLevel" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_TicketLevel">
+        <PropertyRef Name="LevelId" />
+      </Principal>
+      <Dependent Role="TS_TicketMaster">
+        <PropertyRef Name="LevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketDetail_TS_Setup_TicketStatus">
+    <End Type="TicketSystemModel.TS_Setup_TicketStatus" Role="TS_Setup_TicketStatus" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TicketDetail" Role="TS_TicketDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_TicketStatus">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="TS_TicketDetail">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMaster_TS_Setup_TicketStatus">
+    <End Type="TicketSystemModel.TS_Setup_TicketStatus" Role="TS_Setup_TicketStatus" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_TicketStatus">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="TS_TicketMaster">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMaster_TS_Setup_TicketType">
+    <End Type="TicketSystemModel.TS_Setup_TicketType" Role="TS_Setup_TicketType" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_TicketType">
+        <PropertyRef Name="TicketTypeId" />
+      </Principal>
+      <Dependent Role="TS_TicketMaster">
+        <PropertyRef Name="TicketTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TaskMaster_TS_TicketMaster">
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TaskMaster" Role="TS_TaskMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_TicketMaster">
+        <PropertyRef Name="TicketMasterId" />
+      </Principal>
+      <Dependent Role="TS_TaskMaster">
+        <PropertyRef Name="TicketMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketDetail_TS_TicketMaster">
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_TicketDetail" Role="TS_TicketDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_TicketMaster">
+        <PropertyRef Name="TicketMasterId" />
+      </Principal>
+      <Dependent Role="TS_TicketDetail">
+        <PropertyRef Name="TicketMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketDetail_UserLogin">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TicketDetail" Role="TS_TicketDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_TicketDetail">
+        <PropertyRef Name="AssigneeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMaster_UserLogin">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_TicketMaster">
+        <PropertyRef Name="AssigneeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMaster_UserLogin1">
+    <End Type="TicketSystemModel.UserLogin" Role="UserLogin" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="TS_TicketMaster">
+        <PropertyRef Name="InitiatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TS_TicketMeeting_TS_TicketMaster">
+    <End Type="TicketSystemModel.TS_TicketMaster" Role="TS_TicketMaster" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.TS_TicketMeeting" Role="TS_TicketMeeting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_TicketMaster">
+        <PropertyRef Name="TicketMasterId" />
+      </Principal>
+      <Dependent Role="TS_TicketMeeting">
+        <PropertyRef Name="TicketMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TS_Setup_TypeOfComplaint">
+    <Key>
+      <PropertyRef Name="TypeOfComplaintId" />
+    </Key>
+    <Property Name="TypeOfComplaintId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeOfComplaint" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TS_Setup_ProductSubCategory">
+    <Key>
+      <PropertyRef Name="ProductSubCategoryId" />
+    </Key>
+    <Property Name="ProductSubCategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeOfIssueId" Type="Int32" Nullable="false" />
+    <Property Name="ProductSubCategory" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIp" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TS_Setup_TypeOfIssue" Relationship="TicketSystemModel.FK_TS_Setup_ProductSubCategory_TS_Setup_TypeOfIssue" FromRole="TS_Setup_ProductSubCategory" ToRole="TS_Setup_TypeOfIssue" />
+  </EntityType>
+  <Association Name="FK_TS_Setup_ProductSubCategory_TS_Setup_TypeOfIssue">
+    <End Type="TicketSystemModel.TS_Setup_TypeOfIssue" Role="TS_Setup_TypeOfIssue" Multiplicity="1" />
+    <End Type="TicketSystemModel.TS_Setup_ProductSubCategory" Role="TS_Setup_ProductSubCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_TypeOfIssue">
+        <PropertyRef Name="TypeOfIssueId" />
+      </Principal>
+      <Dependent Role="TS_Setup_ProductSubCategory">
+        <PropertyRef Name="TypeOfIssueId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TS_Setup_City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedAt" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Sort" Type="Int32" />
+    <NavigationProperty Name="Customers" Relationship="TicketSystemModel.FK_TS_Setup_City_Customer_City" FromRole="TS_Setup_City" ToRole="Customer" />
+  </EntityType>
+  <Association Name="FK_TS_Setup_City_Customer_City">
+    <End Type="TicketSystemModel.TS_Setup_City" Role="TS_Setup_City" Multiplicity="0..1" />
+    <End Type="TicketSystemModel.Customer" Role="Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TS_Setup_City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Setup_TicketPreRequisite_Values">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FormType" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Setup_RequestTypeSubcategoryFieldType">
+    <Key>
+      <PropertyRef Name="RequestTypeSubcategoryFieldTypeId" />
+    </Key>
+    <Property Name="RequestTypeSubcategoryFieldTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestTypeSubcategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Caption" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FieldTypeId" Type="Int32" Nullable="false" />
+    <Property Name="InputClass" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SortOrder" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="UserIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Setup_RequestTypeSubcategoryFieldTypeDetail">
+    <Key>
+      <PropertyRef Name="RequestTypeSubcategoryFieldTypeDetailId" />
+    </Key>
+    <Property Name="RequestTypeSubcategoryFieldTypeDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestTypeSubcategoryFieldTypeId" Type="Int32" Nullable="false" />
+    <Property Name="FieldValue" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FieldValueID" Type="Int32" />
+    <Property Name="FieldValueTypeID" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SortOrder" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Setup_RequestTypeSubcategoryFieldValue">
+    <Key>
+      <PropertyRef Name="RequestTypeSubcategoryFieldValueId" />
+    </Key>
+    <Property Name="RequestTypeSubcategoryFieldValueId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketMasterId" Type="Int32" />
+    <Property Name="RequestTypeSubcategoryFieldTypeId" Type="Int32" Nullable="false" />
+    <Property Name="FieldValue" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestTypeSubcategoryFieldTypeDetailId" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedDateInt" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDateInt" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TS_Setup_ReportedBy">
+    <Key>
+      <PropertyRef Name="ReportedById" />
+    </Key>
+    <Property Name="ReportedById" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReportedByName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedAt" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Sort" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TS_Setup_TicketPreRequisiteValuesType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="UserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+</Schema>
